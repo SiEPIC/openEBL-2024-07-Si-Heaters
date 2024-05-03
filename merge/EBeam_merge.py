@@ -304,7 +304,7 @@ for i in range(0,len(layers_move)):
 log('')
 
 #export_layout (top_cell, path, filename='EBeam', relative_path='', format='gds')
-file_out = export_layout (top_cell, path, filename='EBeam', relative_path='', format='oas')
+file_out = export_layout (top_cell, path, filename=filename_out, relative_path='', format='oas')
 # log("Layout exported successfully %s: %s" % (save_options.format, file_out) )
 
 log("\nExecution time: %s seconds" % int((time.time() - start_time)))
