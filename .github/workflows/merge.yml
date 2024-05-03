@@ -37,7 +37,7 @@ jobs:
       - name: move merge output files to new folder
         run: |
           #output_files="EBeam.gds EBeam.oas EBeam.txt EBeam.coords"
-          output_files="EBeam.oas EBeam.txt"
+          output_files="EBeam_Si_Heaters.oas EBeam_Si_Heaters.txt"
 
           IFS=' '
 
