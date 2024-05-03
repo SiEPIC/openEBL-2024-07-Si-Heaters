@@ -1,0 +1,100 @@
+name: Run Python Files
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "submissions/KLayout Python/**.py"
+    branches:
+      - '**'
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+        # can also specify python version if needed
+      - name: setup python
+        uses: actions/setup-python@v4
+
+      - name: install python packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install klayout SiEPIC siepic_ebeam_pdk
+          python -m pip install --upgrade SiEPIC
+
+      - name: run python scripts and get output gds / oas file
+        run: |
+
+          # get added/modified py files
+          export FILES=$(git diff --name-only --diff-filter=ACM ${{ github.event.before }} ${{ github.sha }} -- "submissions/KLayout Python" | grep -E '\.py$')
+          echo "FILES=$FILES" >> $GITHUB_ENV
+
+          echo "Added / modified Python files; $FILES"
+
+          # delete .oas and .gds files in the runner's submissions folder
+          # this is needed in the case where someone already has file_name.gds and is now trying to generate file_name.oas (or vice versa)
+          rm -f submissions/*.gds submissions/*.oas
+
+          IFS=$'\n'
+        
+          OUTPUT_FILES=""
+          
+          for file in $FILES; do
+
+            echo "Getting oas/gds output for $file"
+
+            # run file and generate a gds / oas output
+            python "$file" 
+
+            # get output and save to OUTPUT_FILES
+            gds_files=$(find submissions -type f -name "*.gds" -exec basename {} .gds \;)
+            oas_files=$(find submissions -type f -name "*.gds" -exec basename {} .oas \;)
+
+            file_name=$(basename "$file")
+            file_name_no_py=$(basename "$file_name" .py)
+
+            output_files=""
+            if echo "$gds_files" | grep -q "$file_name_no_py"; then
+              output_file="${file_name_no_py}.gds"
+            else
+              output_file="${file_name_no_py}.oas"
+            fi
+
+            OUTPUT_FILES+="$output_file "
+
+            echo "Done for $file"
+
+          done
+
+          echo "output files; $OUTPUT_FILES"
+
+          echo "OUTPUT_FILES=$OUTPUT_FILES" >> $GITHUB_ENV
+
+      - name: write added oas and gds files to txt file
+        run: |
+          echo "$OUTPUT_FILES" > python-to-gds_oas.txt
+
+      - name: commit outputted oas and gds files into repository
+        run: |
+          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --local user.name "${{ github.actor }}"
+
+          git add python-to-gds_oas.txt
+
+          echo "git add python-to-gds_oas.txt"
+
+          # git add all produced oas files
+          for file in $OUTPUT_FILES; do
+            git add "submissions/$file"
+            echo "git add $file"
+          done
+
+          git commit -m "Add oas and gds files produced from .py files" 
+          git push
+
