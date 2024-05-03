@@ -3,7 +3,8 @@
 
 - The Canadian Silicon Photonics Foundry, <a href="https://siepic.ca/fabrication/">SiEPICfab</a>, presents the open electron beam lithography (EBL) fabrication process, where former and current students of <a href="https://siepic.ca/education/">SiEPIC</a> workshops and courses can submit their design for manufacturing and testing.
 - More details about <a href="https://siepic.ca/openEBL/">openEBL</a>.
-- The previous submission was in [February 2024](https://github.com/SiEPIC/openEBL-2024-02-Si-Heaters). 
+- The previous submission was in [February 2024](https://github.com/SiEPIC/openEBL-2024-02-Si-Heaters).
+- Submission deadline: August 1, 2024
 
 # Fabrication process: Passive Silicon + Heaters
 ## Technical summary:
