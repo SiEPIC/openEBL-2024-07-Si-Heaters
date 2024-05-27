@@ -1,9 +1,10 @@
 name: Merge complete
 
-# merge the layout after the pull request is approved
 on:
   pull_request_review:
-    types: [submitted]
+  # merge the layout after the pull request is approved
+    types: 
+      - submitted
 
 jobs:
   approved:
