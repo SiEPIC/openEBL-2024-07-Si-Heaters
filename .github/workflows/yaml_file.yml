@@ -56,7 +56,7 @@ jobs:
 
         echo "Missing YAML files count: $missing_yaml_files"
         echo "missing_yaml_files=$missing_yaml_files" >> $GITHUB_ENV
-        printf "missing_files_list<<EOF\n$missing_files_list\nEOF" >> $GITHUB_ENV
+        echo "missing_files_list=$(echo -e \"$missing_files_list\")" >> $GITHUB_ENV
 
     - name: Create comment if any YAML files are missing
       if: env.missing_yaml_files != '0'
@@ -65,17 +65,17 @@ jobs:
         script: |
           const missingFilesList = process.env.missing_files_list;
           const commentBody = `
-### Missing Corresponding YAML Files
+          ### Missing Corresponding YAML Files
 
-The following design files (.gds or .oas) are missing their corresponding .yaml files:
+          The following design files (.gds or .oas) are missing their corresponding .yaml files:
 
-${missingFilesList}
+          ${missingFilesList}
 
-The YAML file is a test sequence format. It's important to think about testing during the design process (Design for Test). Including a test sequence helps ensure that the design can be effectively validated and verified. Please make sure to include the necessary .yaml files to facilitate this.
+          The YAML file is a test sequence format. It's important to think about testing during the design process (Design for Test). Including a test sequence helps ensure that the design can be effectively validated and verified. Please make sure to include the necessary .yaml files to facilitate this.
 
-For more information, refer to the [SiEPIC Testcreator](https://github.com/SiEPIC/SiEPIC_testcreator) repository.
+          For more information, refer to the [SiEPIC Testcreator](https://github.com/SiEPIC/SiEPIC_testcreator) repository.
 
-Thank you!
+          Thank you!
           `;
 
           github.rest.issues.createComment({
