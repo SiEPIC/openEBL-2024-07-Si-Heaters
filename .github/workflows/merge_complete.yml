@@ -1,43 +1,43 @@
-name: Run Merge Script
+name: Merge complete
 
+# merge the layout after the pull request is approved
 on:
-  workflow_dispatch:
-  # run after layout verification
-  workflow_run:
-    workflows: ["Run Layout Verification"]
-    types:
-      - completed
+  pull_request_review:
+    types: [submitted]
 
 jobs:
-  merge:
+  approved:
+    if: github.event.review.state == 'APPROVED'
     runs-on: ubuntu-latest
 
     steps:
       - name: checkout repo content
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          # https://github.com/MestreLion/git-tools?tab=readme-ov-file#git-restore-mtime
+          fetch-depth: 0
 
-        # can also specify python version if needed
+
+      - name: Restore original modification time of files based on the date of the most recent commit
+        uses: chetan/git-restore-mtime-action@v2
+
       - name: setup python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11' 
           cache: 'pip'
 
-      - name: install python packages
+      - name: install Python packages
         run: |
-          #python -m pip install --upgrade pip
-          pip install klayout SiEPIC siepic_ebeam_pdk pandas
-          python -m pip install --upgrade SiEPIC
+          pip install klayout SiEPIC siepic_ebeam_pdk pandas          
 
       - name: run merge script
         run: |
-
           python merge/EBeam_merge.py
 
       - name: move merge output files to new folder
         run: |
-          #output_files="EBeam.gds EBeam.oas EBeam.txt EBeam.coords"
-          output_files="EBeam_Si_Heaters.oas EBeam_Si_Heaters.txt"
+          output_files="EBeam.oas EBeam.txt"
 
           IFS=' '
 
@@ -53,7 +53,7 @@ jobs:
         with:
           name: merge-files
           path: merge_output/
-      
+
       - name: get artifact url
         run: |
           IFS='/' read -ra REPO <<< "$GITHUB_REPOSITORY"
@@ -61,36 +61,38 @@ jobs:
           REPO_NAME="${REPO[1]}"
           echo "Owner: $OWNER"
           echo "Repository: $REPO_NAME"
-          
+
           RUN_ID=${{ github.run_id }}
           ARTIFACT_ID=${{ steps.artifact-upload.outputs.artifact-id }}
           ARTIFACT_URL="https://github.com/$OWNER/$REPO_NAME/actions/runs/$RUN_ID/artifacts/$ARTIFACT_ID"
           echo "Artifact URL: $ARTIFACT_URL"
-          
+
           echo "ARTIFACT_URL=$ARTIFACT_URL" >> $GITHUB_ENV
           echo "OWNER=$OWNER" >> $GITHUB_ENV
-          
-      - name: update url in runner README 
+
+      - name: update url in runner README
         run: |
           start_delim="<!-- start-link -->"
           end_delim="<!-- end-link -->"
-          
+
           # remove current URL
           sed -i "/$start_delim/,/$end_delim/d" README.md
-          
+
           # add new URL
           printf "$start_delim\n$ARTIFACT_URL\n$end_delim\n" >> README.md
-          
-      # merge script always runs on any PR, this ensures link is only updated after a PR is merged into SiEPIC
+
+      # after a PR is merged into SiEPIC
       - name: commit and push changes to README if we are in SiEPIC repo
         run: |
+          git pull origin main
           git diff
           git config --local user.email "${{ github.actor }}@users.noreply.github.com"
           git config --local user.name "${{ github.actor }}"
           git add README.md
           git commit -m "update README with new artifact url $ARTIFACT_URL"
-          git push 
-        if: ${{ env.OWNER == 'SiEPIC'}}
+          git push
+        if: github.repository_owner == 'SiEPIC'
+
 
     - name: Create comment
       uses: actions/github-script@v6
@@ -98,11 +100,13 @@ jobs:
         script: |
           const missingFilesList = process.env.missing_files_list;
           const commentBody = `
-          ### Draft merge:
+          ### Layout merged:
 
           Thank you for submitting your design.  
           
-          Please download the merged layout and confirm (by responding in a Comment below) that your layout is correctly merged:
+          Your design has been accepted and merged!
+          
+          Please download the merged layout and double-check that your layout is correctly merged:
 
           ${ARTIFACT_URL}
 
