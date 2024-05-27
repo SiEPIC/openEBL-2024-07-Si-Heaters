@@ -15,8 +15,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+      with:
+        fetch-depth: 0
 
     - name: Get list of changed files
       id: changed_files
