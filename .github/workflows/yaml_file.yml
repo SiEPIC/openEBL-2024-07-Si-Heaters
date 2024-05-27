@@ -21,7 +21,7 @@ jobs:
       id: changed_files
       run: |
         echo "Changed files:"
-        git diff --name-only HEAD~1 > changed_files.txt
+        git diff --name-only --diff-filter=d HEAD~1  > changed_files.txt
         cat changed_files.txt
 
     - name: Filter .gds and .oas files
