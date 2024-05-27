@@ -7,7 +7,7 @@ on:
       - submitted
 
 jobs:
-  approved:
+  merge:
     if: github.event.review.state == 'APPROVED'
     runs-on: ubuntu-latest
 
