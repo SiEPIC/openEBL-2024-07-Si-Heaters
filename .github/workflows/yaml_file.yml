@@ -1,4 +1,4 @@
-name: Check GDS and YAML Files
+name: Check for the presence of a corresponding YAML file(s)
 
 on:
   pull_request:
@@ -65,9 +65,9 @@ jobs:
 
           ${missingFilesList}
 
-          The YAML file is a test sequence format. It's important to think about testing during the design process (Design for Test). Including a test sequence helps ensure that the design can be effectively validated and verified. Please make sure to include the necessary .yaml files to facilitate this.
+          The YAML file is used to describe an automated test sequence. It is important to think about testing during the design process (Design for Test). Including a test sequence helps ensure that the design can be effectively validated and verified. Please make sure to include the necessary .yaml files to facilitate this.
 
-          For more information, refer to the [SiEPIC Testcreator](https://github.com/SiEPIC/SiEPIC_testcreator) repository.
+          For more information on how to create the test sequence, please refer to the [SiEPIC Testcreator](https://github.com/SiEPIC/SiEPIC_testcreator) repository.
 
           Thank you!
           `;
