@@ -1,0 +1,54 @@
+name: Check GDS and YAML Files
+
+on:
+  push:
+    paths:
+      - '**.gds'
+  pull_request:
+    paths:
+      - '**.gds'
+
+jobs:
+  check_files:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Get list of changed files
+      id: changed_files
+      run: |
+        echo "Changed files:"
+        git diff --name-only ${{ github.event.before }} ${{ github.sha }} > changed_files.txt
+        cat changed_files.txt
+
+    - name: Filter .gds files
+      id: gds_files
+      run: |
+        echo "GDS files:"
+        grep '\.gds$' changed_files.txt > gds_files.txt
+        cat gds_files.txt
+
+    - name: Check for corresponding .yaml files
+      id: yaml_check
+      run: |
+        missing_yaml_files=0
+        while IFS= read -r gds_file; do
+          base_name=$(basename "$gds_file" .gds)
+          yaml_file=$(dirname "$gds_file")/"$base_name".yaml
+          if [[ -f "$yaml_file" ]]; then
+            echo "Found corresponding YAML file for $gds_file"
+          else
+            echo "Missing YAML file for $gds_file"
+            missing_yaml_files=$((missing_yaml_files + 1))
+          fi
+        done < gds_files.txt
+
+        echo "Missing YAML files count: $missing_yaml_files"
+        echo "::set-output name=missing_yaml_files::$missing_yaml_files"
+
+    - name: Fail if any YAML files are missing
+      if: steps.yaml_check.outputs.missing_yaml_files != '0'
+      run: |
+        echo "One or more .gds files are missing corresponding .yaml files"
+        exit 1
