@@ -115,5 +115,5 @@ jobs:
               repo: context.repo.repo,
               body: commentBody
             });
-        if: ${{ github.event.issue.pull_request }}
+        if: ${{ github.event.pull_request }}
 
