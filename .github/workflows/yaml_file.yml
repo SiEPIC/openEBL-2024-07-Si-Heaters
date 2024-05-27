@@ -56,7 +56,7 @@ jobs:
 
         echo "Missing YAML files count: $missing_yaml_files"
         echo "missing_yaml_files=$missing_yaml_files" >> $GITHUB_ENV
-        echo "missing_files_list=$missing_files_list" >> $GITHUB_ENV
+        printf "missing_files_list<<EOF\n$missing_files_list\nEOF" >> $GITHUB_ENV
 
     - name: Create comment if any YAML files are missing
       if: env.missing_yaml_files != '0'
