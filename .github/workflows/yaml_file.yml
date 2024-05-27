@@ -1,12 +1,6 @@
 name: Check GDS and YAML Files
 
 on:
-  push:
-    paths:
-      - '**/*.gds'
-      - '**/*.GDS'
-      - '**/*.oas'
-      - '**/*.OAS'
   pull_request:
     paths:
       - '**/*.gds'
@@ -61,7 +55,7 @@ jobs:
     - name: Create comment if any YAML files are missing
       if: env.missing_yaml_files != '0'
       uses: actions/github-script@v6
-      with: 
+      with:
         script: |
           const missingFilesList = process.env.missing_files_list;
           const commentBody = `
