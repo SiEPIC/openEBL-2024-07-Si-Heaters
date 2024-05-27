@@ -1,18 +1,13 @@
-name: Check GDS and YAML Files
+name: Check for the presence of a corresponding YAML file(s)
 
 on:
-  push:
-    paths:
-      - '**/*.gds'
-      - '**/*.GDS'
-      - '**/*.oas'
-      - '**/*.OAS'
   pull_request:
     paths:
       - '**/*.gds'
       - '**/*.GDS'
       - '**/*.oas'
       - '**/*.OAS'
+    types: [opened, synchronize]
 
 jobs:
   check_files:
@@ -27,7 +22,7 @@ jobs:
       id: changed_files
       run: |
         echo "Changed files:"
-        git diff --name-only HEAD~1 > changed_files.txt
+        git diff --name-only --diff-filter=d HEAD~1  > changed_files.txt
         cat changed_files.txt
 
     - name: Filter .gds and .oas files
@@ -50,7 +45,7 @@ jobs:
           else
             echo "Missing YAML file for $design_file"
             missing_yaml_files=$((missing_yaml_files + 1))
-            missing_files_list="$missing_files_list\n- $design_file"
+            missing_files_list="$missing_files_list   $design_file"
           fi
         done < design_files.txt
 
@@ -65,17 +60,17 @@ jobs:
         script: |
           const missingFilesList = process.env.missing_files_list;
           const commentBody = `
-### Missing Corresponding YAML Files
+          ### Missing Corresponding YAML Files
 
-The following design files (.gds or .oas) are missing their corresponding .yaml files:
+          The following design files (.gds or .oas) are missing their corresponding .yaml files:
 
-${missingFilesList}
+          ${missingFilesList}
 
-The YAML file is a test sequence format. It's important to think about testing during the design process (Design for Test). Including a test sequence helps ensure that the design can be effectively validated and verified. Please make sure to include the necessary .yaml files to facilitate this.
+          The YAML file is used to describe an automated test sequence. It is important to think about testing during the design process (Design for Test). Including a test sequence helps ensure that the design can be effectively validated and verified. Please make sure to include the necessary .yaml files to facilitate this.
 
-For more information, refer to the [SiEPIC Testcreator](https://github.com/SiEPIC/SiEPIC_testcreator) repository.
+          For more information on how to create the test sequence, please refer to the [SiEPIC Testcreator](https://github.com/SiEPIC/SiEPIC_testcreator) repository.
 
-Thank you!
+          Thank you!
           `;
 
           github.rest.issues.createComment({
