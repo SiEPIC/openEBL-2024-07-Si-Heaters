@@ -95,29 +95,29 @@ jobs:
         if: github.repository_owner == 'SiEPIC'
 
 
-    - name: Create comment
-      uses: actions/github-script@v6
-      with:
-        script: |
-          const missingFilesList = process.env.missing_files_list;
-          const commentBody = `
-          ### Layout merged:
+      - name: Create comment
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const missingFilesList = process.env.missing_files_list;
+            const commentBody = `
+            ### Layout merged:
 
-          Thank you for submitting your design.  
+            Thank you for submitting your design.  
           
-          Your design has been accepted and merged!
+            Your design has been accepted and merged!
           
-          Please download the merged layout and double-check that your layout is correctly merged:
+            Please download the merged layout and double-check that your layout is correctly merged:
 
-          ${ARTIFACT_URL}
+            ${ARTIFACT_URL}
 
-          Thank you!
-          `;
+            Thank you!
+            `;
 
-          github.rest.issues.createComment({
-            issue_number: context.issue.number,
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            body: commentBody
-          });
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: commentBody
+            });
 

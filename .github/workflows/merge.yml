@@ -92,27 +92,27 @@ jobs:
           git push 
         if: ${{ env.OWNER == 'SiEPIC'}}
 
-    - name: Create comment
-      uses: actions/github-script@v6
-      with:
-        script: |
-          const missingFilesList = process.env.missing_files_list;
-          const commentBody = `
-          ### Draft merge:
+      - name: Create comment
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const missingFilesList = process.env.missing_files_list;
+            const commentBody = `
+            ### Draft merge:
 
-          Thank you for submitting your design.  
+            Thank you for submitting your design.  
           
-          Please download the merged layout and confirm (by responding in a Comment below) that your layout is correctly merged:
+            Please download the merged layout and confirm (by responding in a Comment below) that your layout is correctly merged:
 
-          ${ARTIFACT_URL}
+            ${ARTIFACT_URL}
 
-          Thank you!
-          `;
+            Thank you!
+            `;
 
-          github.rest.issues.createComment({
-            issue_number: context.issue.number,
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            body: commentBody
-          });
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: commentBody
+            });
 
