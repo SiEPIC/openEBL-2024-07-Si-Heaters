@@ -53,10 +53,10 @@ jobs:
         done < design_files.txt
 
         echo "Missing YAML files count: $missing_yaml_files"
-        echo "::set-output name=missing_yaml_files::$missing_yaml_files"
+        echo "missing_yaml_files=$missing_yaml_files" >> $GITHUB_ENV
 
     - name: Fail if any YAML files are missing
-      if: steps.yaml_check.outputs.missing_yaml_files != '0'
+      if: env.missing_yaml_files != '0'
       run: |
         echo "One or more .gds or .oas files are missing corresponding .yaml files"
         exit 1
