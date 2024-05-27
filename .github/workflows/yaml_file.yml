@@ -20,6 +20,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
+      with:
+        fetch-depth: 2  # Fetch at least the last 2 commits
 
     - name: Get list of changed files
       id: changed_files
