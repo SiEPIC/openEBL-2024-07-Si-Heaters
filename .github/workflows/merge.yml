@@ -96,7 +96,7 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            const missingFilesList = process.env.missing_files_list;
+            const ARTIFACT_URL = process.env.ARTIFACT_URL;
             const commentBody = `
             ### Draft merge:
 
