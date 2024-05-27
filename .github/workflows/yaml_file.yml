@@ -1,56 +1,54 @@
 name: Check GDS and YAML Files
 
-
 on:
   push:
     paths:
-      - '**.gds'
+      - '**/*.gds'
+      - '**/*.GDS'
+      - '**/*.oas'
+      - '**/*.OAS'
   pull_request:
     paths:
-      - '**.gds'
+      - '**/*.gds'
+      - '**/*.GDS'
+      - '**/*.oas'
+      - '**/*.OAS'
 
 jobs:
   check_files:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
+      uses: actions/checkout@v3
 
     - name: Get list of changed files
       id: changed_files
       run: |
         echo "Changed files:"
-        git diff --name-only HEAD~1
-        export FILES=$(git diff --name-only --diff-filter=ACM FETCH_HEAD)
-        echo "$FILES"
-        export FILES2=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} )
-        echo "$FILES2"
-        git diff --name-only ${{ github.event.before }} ${{ github.sha }} > changed_files.txt
+        git diff --name-only HEAD~1 > changed_files.txt
         cat changed_files.txt
 
-    - name: Filter .gds files
-      id: gds_files
+    - name: Filter .gds and .oas files
+      id: design_files
       run: |
-        echo "GDS files:"
-        grep '\.gds$' changed_files.txt > gds_files.txt
-        cat gds_files.txt
+        echo "Design files (.gds, .oas):"
+        grep -iE '\.(gds|oas)$' changed_files.txt > design_files.txt
+        cat design_files.txt
 
     - name: Check for corresponding .yaml files
       id: yaml_check
       run: |
         missing_yaml_files=0
-        while IFS= read -r gds_file; do
-          base_name=$(basename "$gds_file" .gds)
-          yaml_file=$(dirname "$gds_file")/"$base_name".yaml
+        while IFS= read -r design_file; do
+          base_name=$(basename "$design_file" | sed -E 's/\.(gds|oas)$//I')
+          yaml_file=$(dirname "$design_file")/"$base_name".yaml
           if [[ -f "$yaml_file" ]]; then
-            echo "Found corresponding YAML file for $gds_file"
+            echo "Found corresponding YAML file for $design_file"
           else
-            echo "Missing YAML file for $gds_file"
+            echo "Missing YAML file for $design_file"
             missing_yaml_files=$((missing_yaml_files + 1))
           fi
-        done < gds_files.txt
+        done < design_files.txt
 
         echo "Missing YAML files count: $missing_yaml_files"
         echo "::set-output name=missing_yaml_files::$missing_yaml_files"
@@ -58,5 +56,5 @@ jobs:
     - name: Fail if any YAML files are missing
       if: steps.yaml_check.outputs.missing_yaml_files != '0'
       run: |
-        echo "One or more .gds files are missing corresponding .yaml files"
+        echo "One or more .gds or .oas files are missing corresponding .yaml files"
         exit 1
