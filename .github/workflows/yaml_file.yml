@@ -19,6 +19,10 @@ jobs:
       id: changed_files
       run: |
         echo "Changed files:"
+        export FILES=$(git diff --name-only --diff-filter=ACM FETCH_HEAD)
+        echo "$FILES"
+        export FILES2=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} )
+        echo "$FILES2"
         git diff --name-only ${{ github.event.before }} ${{ github.sha }} > changed_files.txt
         cat changed_files.txt
 
