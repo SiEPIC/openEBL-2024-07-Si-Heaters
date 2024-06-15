@@ -10,7 +10,14 @@ Devices:
     - -181.0
     - 190.0
     polarization: TE
-    sequences: []
+    sequences:
+    - TEMZI1a(current_sweep_ida)
+    - TEMZI1a(voltage_sweep_ida)
+    - TEMZI1a(wavelength_sweep_ida)
+    - TEMZI1a(set_voltage_wavelength_sweep_ida)
+    - TEMZI1a(set_current_wavelength_sweep_ida)
+    - TEMZI1a(set_wavelength_current_sweep_ida)
+    - TEMZI1a(set_wavelength_voltage_sweep_ida)
     wavelength: '1550'
   ColemanTheSoulmanTMMZI1a:
     device_id: ColemanTheSoulmanTMMZI1a
@@ -23,7 +30,13 @@ Devices:
     - -176.0
     - -31.0
     polarization: TM
-    sequences: []
+    sequences:
+    - TMMZIa(current_sweep_ida)
+    - TMMZIa(voltage_sweep_ida)
+    - TMMZIa(set_current_wavelength_sweep_ida)
+    - TMMZIa(set_voltage_wavelength_sweep_ida)
+    - TMMZIa(set_wavelength_current_sweep_ida)
+    - TMMZIa(set_wavelength_voltage_sweep_ida)
     wavelength: '1550'
 Sequences:
   TEMZI1a(current_sweep_ida):
