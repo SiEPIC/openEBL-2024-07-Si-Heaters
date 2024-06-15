@@ -1,0 +1,87 @@
+name: Check for the presence of a corresponding YAML file(s)
+
+on:
+  pull_request:
+    paths:
+      - '**/*.gds'
+      - '**/*.GDS'
+      - '**/*.oas'
+      - '**/*.OAS'
+    types: [opened, synchronize]
+
+jobs:
+  check_files:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 2  # Fetch at least the last 2 commits
+
+    - name: Get list of changed files
+      id: changed_files
+      run: |
+        echo "Changed files:"
+        git diff --name-only --diff-filter=d HEAD~1  > changed_files.txt
+        cat changed_files.txt
+
+    - name: Filter .gds and .oas files
+      id: design_files
+      run: |
+        echo "Design files (.gds, .oas):"
+        grep -iE '\.(gds|oas)$' changed_files.txt > design_files.txt
+        cat design_files.txt
+
+    - name: Check for corresponding .yaml files
+      id: yaml_check
+      run: |
+        missing_yaml_files=0
+        missing_files_list=""
+        while IFS= read -r design_file; do
+          base_name=$(basename "$design_file" | sed -E 's/\.(gds|oas)$//I')
+          yaml_file=$(dirname "$design_file")/"$base_name".yaml
+          if [[ -f "$yaml_file" ]]; then
+            echo "Found corresponding YAML file for $design_file"
+          else
+            echo "Missing YAML file for $design_file"
+            missing_yaml_files=$((missing_yaml_files + 1))
+            missing_files_list="$missing_files_list   $design_file"
+          fi
+        done < design_files.txt
+
+        echo "Missing YAML files count: $missing_yaml_files"
+        echo "missing_yaml_files=$missing_yaml_files" >> $GITHUB_ENV
+        echo "missing_files_list=$missing_files_list" >> $GITHUB_ENV
+
+    - name: Create comment if any YAML files are missing
+      if: env.missing_yaml_files != '0'
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const missingFilesList = process.env.missing_files_list;
+          const commentBody = `
+          ### Missing Corresponding YAML Files
+
+          The following design files (.gds or .oas) are missing their corresponding .yaml files:
+
+          ${missingFilesList}
+
+          The YAML file is used to describe an automated test sequence. It is important to think about testing during the design process (Design for Test). Including a test sequence helps ensure that the design can be effectively validated and verified. Please make sure to include the necessary .yaml files to facilitate this.
+
+          For more information on how to create the test sequence, please refer to the [SiEPIC Testcreator](https://github.com/SiEPIC/SiEPIC_testcreator) repository.
+
+          Thank you!
+          `;
+
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: commentBody
+          });
+
+    - name: Fail if any YAML files are missing
+      if: env.missing_yaml_files != '0'
+      run: |
+        echo "One or more .gds or .oas files are missing corresponding .yaml files"
+        exit 1

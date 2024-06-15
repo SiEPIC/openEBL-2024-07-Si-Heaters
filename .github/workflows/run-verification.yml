@@ -86,6 +86,8 @@ jobs:
             # if file results in verification errors add to string files_with_errors
             if [[ "$errors_from_output" -ge 1 ]]; then
               files_with_errors+="$file, $errors_from_output errors. "
+              echo $files_with_errors >> $GITHUB_STEP_SUMMARY
+              echo $output >> $GITHUB_STEP_SUMMARY
             fi
 
             echo "Done verification on $file"
@@ -114,8 +116,10 @@ jobs:
         run: |
           if [ -z "$files_with_errors" ]; then
             echo "No errors detected."
+            echo "No errors detected." >> $GITHUB_STEP_SUMMARY
           else
             echo "Errors detected: $files_with_errors"
+            echo "Errors detected: $files_with_errors" >> $GITHUB_STEP_SUMMARY
             exit 1
           fi
 
