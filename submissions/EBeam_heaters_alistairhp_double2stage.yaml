@@ -1,0 +1,72 @@
+Devices:
+  ahpdouble2stage:
+    device_id: ahpdouble2stage
+    device_type: device
+    electricalCoordinates:
+    - G
+    - 392.0
+    - 422.0
+    opticalCoordinates:
+    - 44.0
+    - 44.0
+    polarization: TE
+    sequences:
+    - filter_wavelength(wavelength_sweep_ida)
+    wavelength: '1310'
+Sequences:
+  (wavelength_sweep_ida):
+    Runtime: 20.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: WavelengthSweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Wavelength (nm)
+      yscale: '1'
+      ytitle: Power (dBm)
+    variables:
+      Initialrange: '-20'
+      Laser Output: High Power
+      Numscans: '1'
+      Power: '1'
+      RangeDec: '20'
+      Start: '1270'
+      Step: '.1'
+      Stop: '1350'
+      Sweep Speed: auto
+  filter_wavelength(wavelength_sweep_ida):
+    Runtime: 20.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: WavelengthSweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Wavelength (nm)
+      yscale: '1'
+      ytitle: Power (dBm)
+    variables:
+      Initialrange: '-20'
+      Laser Output: High Power
+      Numscans: '1'
+      Power: '1'
+      RangeDec: '20'
+      Start: '1270'
+      Step: '.1'
+      Stop: '1350'
+      Sweep Speed: auto
