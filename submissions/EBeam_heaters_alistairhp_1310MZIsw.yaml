@@ -8,16 +8,17 @@ Devices:
     - 422.0
     opticalCoordinates:
     - 44.0
-    - 44.0
+    - 298.0
     polarization: TE
     sequences:
-    - IV_SW_2ch(voltage_sweep_ida)
-    - IV_1310_chA(set_wavelength_voltage_sweep_ida)
-    - IV_1310_chB(set_wavelength_voltage_sweep_ida)
-    - IV_1310_bothch(set_wavelength_voltage_sweep_ida)
+    - sweep_wavelength(wavelength_sweep_ida)
     - wavelength_bothchV(set_voltage_wavelength_sweep_ida)
     - wavelength_chAV(set_voltage_wavelength_sweep_ida)
     - wavelength_chBV(set_voltage_wavelength_sweep_ida)
+    - IV_SW_2ch(voltage_sweep_ida)
+    - IV_1310_chB(set_wavelength_voltage_sweep_ida)
+    - IV_1310_chA(set_wavelength_voltage_sweep_ida)
+    - IV_1310_bothch(set_wavelength_voltage_sweep_ida)
     wavelength: '1310'
 Sequences:
   IV_1310_bothch(set_wavelength_voltage_sweep_ida):
