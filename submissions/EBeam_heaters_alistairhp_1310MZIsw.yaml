@@ -105,33 +105,6 @@ Sequences:
       Step: '0.1'
       Stop: '3'
       Wavelengths: 1271,1291,1311,1331
-  IV_SW(voltage_sweep_ida):
-    Runtime: 15.0
-    results_info:
-      csv: 'True'
-      foldername: ''
-      legend: 'True'
-      mat: 'True'
-      num_plots: '1'
-      pdf: 'True'
-      pkl: 'True'
-      plottitle: Voltage Sweep
-      save_location: ''
-      saveplot: 'True'
-      visual: 'True'
-      xscale: '1'
-      xtitle: Voltage (V)
-      yscale: '1'
-      ytitle: Current (A)
-    variables:
-      Channel A: 'True'
-      Channel B: 'True'
-      IV: 'True'
-      PV: 'False'
-      RV: 'False'
-      Start: '0'
-      Step: '0.1'
-      Stop: '3'
   IV_SW_2ch(voltage_sweep_ida):
     Runtime: 15.0
     results_info:
