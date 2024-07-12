@@ -31,7 +31,7 @@ Devices:
     - passive_sweep(wavelength_sweep_ida)
     - voltage_sweep(set_voltage_wavelength_sweep_ida)
     wavelength: '1550'
-Sequences:
+Routines:
   IV_Ring(voltage_sweep_ida):
     Runtime: 25.0
     results_info:
