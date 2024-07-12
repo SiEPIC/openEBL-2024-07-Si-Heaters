@@ -14,6 +14,9 @@ Devices:
     - IV_MZI(voltage_sweep_ida)
     - livsweep_MZI(set_wavelength_voltage_sweep_ida)
     - wavlsweep_biased(set_voltage_wavelength_sweep_ida)
+    - wavlsweep_biased(set_voltage_wavelength_sweep_ida)
+    - livsweep_MZI(set_wavelength_voltage_sweep_ida)
+    - IV_MZI(voltage_sweep_ida)
     wavelength: '1550'
   MZIwithheater70:
     device_id: MZIwithheater70
@@ -27,6 +30,9 @@ Devices:
     - 167.0
     polarization: TE
     sequences:
+    - wavlsweep_biased(set_voltage_wavelength_sweep_ida)
+    - livsweep_MZI(set_wavelength_voltage_sweep_ida)
+    - IV_MZI(voltage_sweep_ida)
     - IV_MZI(voltage_sweep_ida)
     - livsweep_MZI(set_wavelength_voltage_sweep_ida)
     - wavlsweep_biased(set_voltage_wavelength_sweep_ida)
