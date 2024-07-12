@@ -65,7 +65,7 @@ Devices:
     sequences:
     - (wavelength_sweep_ida)
     wavelength: '1550'
-Sequences:
+Routines:
   (wavelength_sweep_ida):
     Runtime: 25.0
     results_info:
