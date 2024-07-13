@@ -15,4 +15,8 @@ jobs:
         uses: mheap/automatic-approve-action@v1
         with:
           token: ${{ secrets.PAT }}
-          workflows: "*"
+          workflows: 
+            - "run-verification.yml"
+            - "run-drc.yml"
+            - "run-yaml-verification.yml"
+            - "yaml_file.yml"
