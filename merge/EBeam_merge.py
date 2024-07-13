@@ -22,7 +22,7 @@ cell_Height = 470000
 cell_Gap_Width = 8000
 cell_Gap_Height = 8000
 chip_Width = 8650000
-chip_Height1 = 8490000
+chip_Height1 = 8329000 # for column 1 devices
 chip_Height2 = 8780000
 br_cutout_x = 7484000
 br_cutout_y = 898000
@@ -124,6 +124,8 @@ cell_ELEC413 = layout.create_cell("ELEC413")
 top_cell.insert(CellInstArray(cell_ELEC413.cell_index(), t))
 cell_SiEPIC_Passives = layout.create_cell("SiEPIC_Passives")
 top_cell.insert(CellInstArray(cell_SiEPIC_Passives.cell_index(), t))
+cell_unknown = layout.create_cell("unknown")
+top_cell.insert(CellInstArray(cell_unknown.cell_index(), t))
 
 # Create a date	stamp cell
 cell_date = layout.create_cell('.merged:'+now.strftime("%Y-%m-%d-%H:%M:%S"))
@@ -153,6 +155,8 @@ for f in [f for f in files_in if '.oas' in f.lower() or '.gds' in f.lower()]:
         course = 'ELEC413'
     elif 'siepic_passives' in f.lower():
         course = 'SiEPIC_Passives'
+    else:
+        course = 'unknown'
 
     cell_course = eval('cell_' + course)
     log("  - course name: %s" % (course) )
