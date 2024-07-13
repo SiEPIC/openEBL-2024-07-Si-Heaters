@@ -5,7 +5,7 @@ Devices:
     electricalCoordinates:
     - G
     - 378.0
-    - 417.0
+    - 424.0
     opticalCoordinates:
     - 53.0
     - 423.0
@@ -21,7 +21,7 @@ Devices:
     electricalCoordinates:
     - G
     - 378.0
-    - 167.0
+    - 174.0
     opticalCoordinates:
     - 53.0
     - 169.0
@@ -31,6 +31,7 @@ Devices:
     - passive_sweep(wavelength_sweep_ida)
     - voltage_sweep(set_voltage_wavelength_sweep_ida)
     wavelength: '1550'
+Routines: []
 Sequences:
   IV_Ring(voltage_sweep_ida):
     Runtime: 25.0
