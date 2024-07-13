@@ -5,18 +5,15 @@ Devices:
     electricalCoordinates:
     - G
     - 370.0
-    - 415.0
+    - 420.0
     opticalCoordinates:
     - 50.0
     - 421.0
     polarization: TE
     sequences:
     - IV_MZI(voltage_sweep_ida)
-    - livsweep_MZI(set_wavelength_voltage_sweep_ida)
+    - livsweep_mzi(set_wavelength_voltage_sweep_ida)
     - wavlsweep_biased(set_voltage_wavelength_sweep_ida)
-    - wavlsweep_biased(set_voltage_wavelength_sweep_ida)
-    - livsweep_MZI(set_wavelength_voltage_sweep_ida)
-    - IV_MZI(voltage_sweep_ida)
     wavelength: '1550'
   MZIwithheater70:
     device_id: MZIwithheater70
@@ -24,17 +21,14 @@ Devices:
     electricalCoordinates:
     - G
     - 370.0
-    - 165.0
+    - 170.0
     opticalCoordinates:
     - 50.0
     - 167.0
     polarization: TE
     sequences:
-    - wavlsweep_biased(set_voltage_wavelength_sweep_ida)
-    - livsweep_MZI(set_wavelength_voltage_sweep_ida)
     - IV_MZI(voltage_sweep_ida)
-    - IV_MZI(voltage_sweep_ida)
-    - livsweep_MZI(set_wavelength_voltage_sweep_ida)
+    - livsweep_mzi(set_wavelength_voltage_sweep_ida)
     - wavlsweep_biased(set_voltage_wavelength_sweep_ida)
     wavelength: '1550'
 Sequences:
@@ -65,7 +59,7 @@ Sequences:
       Start: '0'
       Step: '0.1'
       Stop: '5'
-  livsweep_MZI(set_wavelength_voltage_sweep_ida):
+  livsweep_mzi(set_wavelength_voltage_sweep_ida):
     Runtime: 7.5
     results_info:
       csv: 'True'
@@ -123,5 +117,4 @@ Sequences:
       Step: '.1'
       Stop: '1580'
       Sweep Speed: auto
-      Voltages: 0, 2, 5, 10
-Routines:[]
+      Voltages: 0,2,5,10
