@@ -61,6 +61,8 @@ jobs:
             echo "Running verification on $file"
 
             output=$(python run_yaml_verification.py "submissions/$file")
+            
+            echo $output  >> $GITHUB_STEP_SUMMARY
 
             # get number of errors
             #errors_from_output=$(echo "$output" | tail -n 1)
@@ -81,8 +83,11 @@ jobs:
         run: |
           if [ -z "$files_with_errors" ]; then
             echo "No errors detected."
+            echo "No errors detected." >> $GITHUB_STEP_SUMMARY
           else
-            echo "Errors detected: $files_with_errors"
+            echo "Errors detected: $files_with_errors" 
+            echo "Errors detected: $files_with_errors" >> $GITHUB_STEP_SUMMARY
+
             exit 1
           fi
 
