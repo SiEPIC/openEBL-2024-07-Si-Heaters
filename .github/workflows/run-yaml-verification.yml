@@ -12,6 +12,8 @@ on:
     branches:
       - '**'
   pull_request:
+    paths:
+      - 'submissions/**.yaml'
     branches:
       - '**'
 
