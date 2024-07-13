@@ -1,0 +1,180 @@
+Devices:
+  RingSwitch0:
+    device_id: RingSwitch0
+    device_type: device
+    electricalCoordinates:
+    - G
+    - 392.0
+    - 422.0
+    opticalCoordinates:
+    - 44.0
+    - 299.0
+    polarization: TE
+    sequences:
+    - passive_sweep(wavelength_sweep_ida)
+    - passive_sweep_granular(wavelength_sweep_ida)
+    - IV_heater(voltage_sweep_ida)
+    - (set_voltage_wavelength_sweep_ida)
+    - voltage_wavelength_granular(set_voltage_wavelength_sweep_ida)
+    wavelength: '1550'
+  RingSwitch1:
+    device_id: RingSwitch1
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 44.0
+    - 299.0
+    polarization: TE
+    sequences:
+    - IV_heater(voltage_sweep_ida)
+    - (set_voltage_wavelength_sweep_ida)
+    - voltage_wavelength_granular(set_voltage_wavelength_sweep_ida)
+    wavelength: '1550'
+Sequences:
+  (set_voltage_wavelength_sweep_ida):
+    Runtime: 125.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: Set Voltage Wavelength Sweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Wavelength (nm)
+      yscale: '1'
+      ytitle: Power (dBm)
+    variables:
+      Channel A: 'True'
+      Channel B: 'False'
+      Initialrange: '-20'
+      Laser Output: High Power
+      Numscans: '1'
+      Power: '1'
+      RangeDec: '20'
+      Start: '1480'
+      Step: '1'
+      Stop: '1580'
+      Sweep Speed: auto
+      Voltages: 0,0.5,1,1.5,2
+  IV_heater(voltage_sweep_ida):
+    Runtime: 25.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'True'
+      plottitle: Voltage Sweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Voltage (V)
+      yscale: '1'
+      ytitle: Current (A)
+    variables:
+      Channel A: 'True'
+      Channel B: 'False'
+      IV: 'True'
+      PV: 'True'
+      RV: 'True'
+      Start: '0'
+      Step: '0.1'
+      Stop: '5'
+  passive_sweep(wavelength_sweep_ida):
+    Runtime: 25.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: WavelengthSweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Wavelength (nm)
+      yscale: '1'
+      ytitle: Power (dBm)
+    variables:
+      Initialrange: '-20'
+      Laser Output: High Power
+      Numscans: '1'
+      Power: '1'
+      RangeDec: '20'
+      Start: '1480'
+      Step: '0.1'
+      Stop: '1580'
+      Sweep Speed: auto
+  passive_sweep_granular(wavelength_sweep_ida):
+    Runtime: 5.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: WavelengthSweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Wavelength (nm)
+      yscale: '1'
+      ytitle: Power (dBm)
+    variables:
+      Initialrange: '-20'
+      Laser Output: High Power
+      Numscans: '1'
+      Power: '1'
+      RangeDec: '20'
+      Start: '1540'
+      Step: '0.01'
+      Stop: '1560'
+      Sweep Speed: auto
+  voltage_wavelength_granular(set_voltage_wavelength_sweep_ida):
+    Runtime: 55.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: Set Voltage Wavelength Sweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Wavelength (nm)
+      yscale: '1'
+      ytitle: Power (dBm)
+    variables:
+      Channel A: 'True'
+      Channel B: 'False'
+      Initialrange: '-20'
+      Laser Output: High Power
+      Numscans: '1'
+      Power: '1'
+      RangeDec: '20'
+      Start: '1540'
+      Step: '0.1'
+      Stop: '1560'
+      Sweep Speed: auto
+      Voltages: 0,0.2,0.4,0.6,0.8,1,1.2,1.4,1.6,1.8,2
+Routines:
+    []
