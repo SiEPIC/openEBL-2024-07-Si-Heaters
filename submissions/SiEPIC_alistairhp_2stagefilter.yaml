@@ -1,21 +1,18 @@
 Devices:
-  BraggGratingwithHeater:
-    device_id: BraggGratingwithHeater
+  ahp2stagefilter:
+    device_id: ahp2stagefilter
     device_type: device
-    electricalCoordinates:
-    - G
-    - 390.0
-    - 422.0
+    electricalCoordinates: []
     opticalCoordinates:
-    - 50.0
-    - 303.0
+    - 44.0
+    - 298.0
     polarization: TE
     sequences:
-    - (set_current_wavelength_sweep_ida)
-    wavelength: '1550'
+    - sweep_wavelength(wavelength_sweep_ida)
+    wavelength: '1310'
 Sequences:
-  (set_current_wavelength_sweep_ida):
-    Runtime: 75.0
+  sweep_wavelength(wavelength_sweep_ida):
+    Runtime: 20.0
     results_info:
       csv: 'True'
       foldername: ''
@@ -24,7 +21,7 @@ Sequences:
       num_plots: '1'
       pdf: 'True'
       pkl: 'False'
-      plottitle: Set Current Wavelength Sweep
+      plottitle: WavelengthSweep
       save_location: ''
       saveplot: 'True'
       visual: 'True'
@@ -33,15 +30,14 @@ Sequences:
       yscale: '1'
       ytitle: Power (dBm)
     variables:
-      Channel A: 'True'
-      Channel B: 'False'
-      Currents: 0, 1, 2
       Initialrange: '-20'
       Laser Output: High Power
       Numscans: '1'
       Power: '1'
       RangeDec: '20'
-      Start: '1480'
-      Step: '1'
-      Stop: '1580'
+      Start: '1270'
+      Step: '.1'
+      Stop: '1350'
       Sweep Speed: auto
+Routines:
+    []
