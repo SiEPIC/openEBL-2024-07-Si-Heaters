@@ -1,0 +1,72 @@
+Devices:
+  aonurdasdemir_gcteD:
+    device_id: aonurdasdemir_gcteD
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 320.0
+    - 241.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+  aonurdasdemir_gctmD:
+    device_id: aonurdasdemir_gctmD
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 321.0
+    - -9.0
+    polarization: TM
+    sequences: []
+    wavelength: '1550'
+  aonurdasdemir_polarbte244D:
+    device_id: aonurdasdemir_polarbte244D
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 215.0
+    - 238.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+  aonurdasdemir_polarbtm244D:
+    device_id: aonurdasdemir_polarbtm244D
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -94.0
+    - 243.0
+    polarization: TM
+    sequences: []
+    wavelength: '1550'
+  aonurdasdemir_poldepte243D:
+    device_id: aonurdasdemir_poldepte243D
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -202.0
+    - 243.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+  aonurdasdemir_polindepte243D:
+    device_id: aonurdasdemir_polindepte243D
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 6.0
+    - 243.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+  aonurdasdemir_polindeptm243D:
+    device_id: aonurdasdemir_polindeptm243D
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 112.0
+    - 243.0
+    polarization: TM
+    sequences: []
+    wavelength: '1550'
+Sequences: {}
