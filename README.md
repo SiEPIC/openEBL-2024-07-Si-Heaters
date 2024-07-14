@@ -15,6 +15,7 @@
   - Oxide cladding
   - TiW metal heater, and Au metal bond pads
 - Details: [Slides](https://docs.google.com/presentation/d/1_ppHYec6LydML4RMRJdNI4DXHb0hgW7znToQCGgSF6M)
+  - design size: 470 µm height x 440 µm width
 - Process Design Kit: [SiEPIC-EBeam-PDK](https://github.com/siepic/SiEPIC_EBeam_PDK) 
 
 ## Layer table
