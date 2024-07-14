@@ -122,8 +122,8 @@ t = Trans(Trans.R0, 0,0)
 top_cell.insert(CellInstArray(cell_edXphot1x.cell_index(), t))
 cell_ELEC413 = layout.create_cell("ELEC413")
 top_cell.insert(CellInstArray(cell_ELEC413.cell_index(), t))
-cell_SiEPIC_Passives = layout.create_cell("SiEPIC_Passives")
-top_cell.insert(CellInstArray(cell_SiEPIC_Passives.cell_index(), t))
+cell_SiEPIC = layout.create_cell("SiEPIC")
+top_cell.insert(CellInstArray(cell_SiEPIC.cell_index(), t))
 cell_unknown = layout.create_cell("unknown")
 top_cell.insert(CellInstArray(cell_unknown.cell_index(), t))
 
@@ -153,8 +153,8 @@ for f in [f for f in files_in if '.oas' in f.lower() or '.gds' in f.lower()]:
         course = 'edXphot1x'
     elif 'elec413' in f.lower():
         course = 'ELEC413'
-    elif 'siepic_passives' in f.lower():
-        course = 'SiEPIC_Passives'
+    elif 'siepic' in f.lower():
+        course = 'SiEPIC'
     else:
         course = 'unknown'
 
