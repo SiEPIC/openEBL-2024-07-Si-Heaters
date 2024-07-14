@@ -1,0 +1,63 @@
+Devices:
+  PSR3a:
+    device_id: PSR3a
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -126.0
+    - -57.0
+    polarization: TE
+    sequences:
+    - test1(wavelength_sweep_ida)
+    wavelength: '1550'
+  PSR3b:
+    device_id: PSR3b
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 7.0
+    - -57.0
+    polarization: TM
+    sequences:
+    - test1(wavelength_sweep_ida)
+    wavelength: '1550'
+  PSR3c:
+    device_id: PSR3c
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 146.0
+    - -56.0
+    polarization: TM
+    sequences:
+    - test1(wavelength_sweep_ida)
+    wavelength: '1550'
+Sequences:
+  test1(wavelength_sweep_ida):
+    Runtime: 25.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: WavelengthSweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Wavelength (nm)
+      yscale: '1'
+      ytitle: Power (dBm)
+    variables:
+      Initialrange: '-20'
+      Laser Output: High Power
+      Numscans: '1'
+      Power: '1'
+      RangeDec: '20'
+      Start: '1480'
+      Step: '1'
+      Stop: '1580'
+      Sweep Speed: auto
