@@ -1,0 +1,110 @@
+Devices:
+  Ring:
+    device_id: Ring
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -175.0
+    - 53.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+  Ring1:
+    device_id: Ring1
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -175.0
+    - 180.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+  Ring3:
+    device_id: Ring3
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -175.0
+    - -73.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+  Ring4:
+    device_id: Ring4
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -175.0
+    - -200.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+  Ring5:
+    device_id: Ring5
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 42.0
+    - -203.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+  Ring6:
+    device_id: Ring6
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 42.0
+    - -76.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+  Ring7:
+    device_id: Ring7
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 42.0
+    - 50.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+  Ring8:
+    device_id: Ring8
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 42.0
+    - 177.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+Sequences:
+  (wavelength_sweep_ida):
+    Runtime: 25.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: WavelengthSweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Wavelength (nm)
+      yscale: '1'
+      ytitle: Power (dBm)
+    variables:
+      Initialrange: '-20'
+      Laser Output: High Power
+      Numscans: '1'
+      Power: '1'
+      RangeDec: '20'
+      Start: '1480'
+      Step: '0.01'
+      Stop: '1580'
+      Sweep Speed: auto
