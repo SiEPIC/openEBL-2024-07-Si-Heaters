@@ -1,0 +1,106 @@
+Devices:
+  MZIa1:
+    device_id: MZIa1
+    device_type: device
+    electricalCoordinates:
+    - G
+    - 168.0
+    - 190.0
+    opticalCoordinates:
+    - -188.0
+    - 218.0
+    polarization: TE
+    sequences:
+    - wl_cur(set_wavelength_voltage_sweep_ida)
+    - cur_wl(set_current_wavelength_sweep_ida)
+    wavelength: '1550'
+  MZIa2:
+    device_id: MZIa2
+    device_type: device
+    electricalCoordinates:
+    - G
+    - 168.0
+    - 189.0
+    opticalCoordinates:
+    - -154.0
+    - 166.0
+    polarization: TE
+    sequences:
+    - wl_cur(set_wavelength_voltage_sweep_ida)
+    - cur_wl(set_current_wavelength_sweep_ida)
+    wavelength: '1550'
+  MZIb1:
+    device_id: MZIb1
+    device_type: device
+    electricalCoordinates:
+    - G
+    - 170.0
+    - -59.0
+    opticalCoordinates:
+    - -186.0
+    - -39.0
+    polarization: TE
+    sequences:
+    - wl_cur(set_wavelength_voltage_sweep_ida)
+    - cur_wl(set_current_wavelength_sweep_ida)
+    wavelength: '1550'
+Sequences:
+  cur_wl(set_current_wavelength_sweep_ida):
+    Runtime: 75.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: Set Current Wavelength Sweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Wavelength (nm)
+      yscale: '1'
+      ytitle: Power (dBm)
+    variables:
+      Channel A: 'True'
+      Channel B: 'False'
+      Currents: 0,0.2,0.4,0.6,0.8
+      Initialrange: '-20'
+      Laser Output: High Power
+      Numscans: '1'
+      Power: '10'
+      RangeDec: '20'
+      Start: '1520'
+      Step: '0.5'
+      Stop: '1580'
+      Sweep Speed: 10nm
+  wl_cur(set_wavelength_voltage_sweep_ida):
+    Runtime: 75.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: Set Wavelength Voltage Sweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Voltage (V)
+      yscale: '1'
+      ytitle: Current (A)
+    variables:
+      Channel A: 'True'
+      Channel B: 'False'
+      IV: 'True'
+      PV: 'True'
+      RV: 'True'
+      Start: '0'
+      Step: '5'
+      Stop: '50'
+      Wavelengths: 1530, 1550, 1580

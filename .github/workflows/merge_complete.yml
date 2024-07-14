@@ -3,11 +3,10 @@ name: Merge complete
 on:
   pull_request_review:
   # merge the layout after the pull request is approved
-    types: 
-      - submitted
+    types: [submitted]
 
 jobs:
-  merge:
+  approved:
     if: github.event.review.state == 'APPROVED'
     runs-on: ubuntu-latest
 
