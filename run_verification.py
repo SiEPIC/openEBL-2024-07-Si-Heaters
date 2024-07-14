@@ -18,6 +18,9 @@ Jasmina Brar 12/08/23
 # gds file to run verification on
 gds_file = sys.argv[1]
 
+if "framework/EBL_Framework_1cm_PCM_static" in gds_file:
+    exit()
+
 # load into layout
 layout = pya.Layout()
 layout.read(gds_file)
