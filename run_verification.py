@@ -45,7 +45,7 @@ filename = gds_file.split(".")[0]
 file_lyrdb = os.path.join(path,filename+'.lyrdb')
 
 # run verification
-num_errors = layout_check(cell = top_cell, verbose=True, GUI=True, file_rdb=file_lyrdb)
+num_errors = layout_check(cell = top_cell, verbose=False, GUI=True, file_rdb=file_lyrdb)
 
 # Print the result value to standard output
 print(num_errors)
