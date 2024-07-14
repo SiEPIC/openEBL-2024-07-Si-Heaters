@@ -97,6 +97,15 @@ jobs:
             # Keep the original content without modification
             FILES_SINGLE_LINE="$FILES"
           fi
+                 
+          # we cannot set a multiline env vars so we must change it to single line (seperated by commas) if we have more than one file
+          if [ $(echo "$FILES" | wc -l) -gt 1 ]; then
+            # Replace newlines with a delimiter (e.g., comma)
+            FILES_SINGLE_LINE=$(echo "$FILES" | tr '\n' ',')
+          else
+            # Keep the original content without modification
+            FILES_SINGLE_LINE="$FILES"
+          fi
 
           echo "$FILES_SINGLE_LINE"
           echo "FILES_SINGLE_LINE=$FILES_SINGLE_LINE" >> $GITHUB_ENV
@@ -244,4 +253,3 @@ jobs:
           echo "files_with_errors=$files_with_errors" >> $GITHUB_ENV
         # Don't run:
         if: github.repository == 'octo-org/octo-repo-prod'
-
