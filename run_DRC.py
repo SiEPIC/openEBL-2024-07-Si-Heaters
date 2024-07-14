@@ -19,6 +19,9 @@ else:
     import os
     gds_file = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'submissions/EBeam_heaters_BraggGratingwithHeater.gds')
 
+if "framework/EBL_Framework_1cm_PCM_static" in gds_file:
+    exit()
+
 # load into layout
 try:
    # load into layout
