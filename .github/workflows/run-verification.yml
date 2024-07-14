@@ -31,7 +31,7 @@ jobs:
 
       - name: Set up environment variables
         run: |
-          echo "PR_BRANCH=${{ github.event.pull_request.base.ref }}" >> $GITHUB_ENV
+          echo "PR_BRANCH=${{ github.ref_name }}" >> $GITHUB_ENV
           echo "BASE_BRANCH=${{ github.base_ref }}" >> $GITHUB_ENV
 
       - name: Fetch branches
@@ -87,15 +87,6 @@ jobs:
               FILES=$(git diff --name-only --diff-filter=ACM --relative=submissions $BASE_BRANCH...$PR_BRANCH  submissions | grep -i -E '\.(gds|oas)$' | awk '{print $2}')
               #FILES=$(git diff --name-status --diff-filter=ACM --relative=submissions ${{ github.event.before }} ${{ github.sha }} submissions | grep -i -E '\.(gds|oas)$' | awk '{print $2}')
             fi
-          fi
-                 
-          # we cannot set a multiline env vars so we must change it to single line (seperated by commas) if we have more than one file
-          if [ $(echo "$FILES" | wc -l) -gt 1 ]; then
-            # Replace newlines with a delimiter (e.g., comma)
-            FILES_SINGLE_LINE=$(echo "$FILES" | tr '\n' ',')
-          else
-            # Keep the original content without modification
-            FILES_SINGLE_LINE="$FILES"
           fi
                  
           # we cannot set a multiline env vars so we must change it to single line (seperated by commas) if we have more than one file
@@ -253,3 +244,4 @@ jobs:
           echo "files_with_errors=$files_with_errors" >> $GITHUB_ENV
         # Don't run:
         if: github.repository == 'octo-org/octo-repo-prod'
+
