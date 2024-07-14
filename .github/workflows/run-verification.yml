@@ -29,6 +29,17 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Set up environment variables
+        run: |
+          echo "PR_BRANCH=${{ github.head_ref }}" >> $GITHUB_ENV
+          echo "BASE_BRANCH=${{ github.base_ref }}" >> $GITHUB_ENV
+
+      - name: Fetch branches
+        run: |
+          git fetch origin $PR_BRANCH
+          git fetch origin $BASE_BRANCH
+
+
       - name: write what triggered this workflow to a txt file
         run: |
           echo "${{ github.event_name }}" > trigger_info.txt
@@ -68,10 +79,13 @@ jobs:
           else
             if [[ "${{ github.event_name }}" == "pull_request" || "${{ github.event_name }}" == "pull_request_target" ]]; then
               # triggered on pull request, get all changed / added files from forked repo
-              FILES=$(git diff --name-only --diff-filter=ACM FETCH_HEAD | grep -i -E '\.(gds|oas)$' | sed 's|^submissions/||')
+              FILES=$(git diff --name-only --diff-filter=ACM $BASE_BRANCH...$PR_BRANCH  | grep -i -E '\.(gds|oas)$' | sed 's|^submissions/||')
+              #FILES=$(git diff --name-only --diff-filter=ACM origin/$BASE_BRANCH...origin/$PR_BRANCH  | grep -i -E '\.(gds|oas)$' | sed 's|^submissions/||')
+              #FILES=$(git diff --name-only --diff-filter=ACM FETCH_HEAD | grep -i -E '\.(gds|oas)$' | sed 's|^submissions/||')
             else
               # triggered push, locate the changed / added .gds and .oas files in the submission folder
-              FILES=$(git diff --name-status --diff-filter=ACM --relative=submissions ${{ github.event.before }} ${{ github.sha }} submissions | grep -i -E '\.(gds|oas)$' | awk '{print $2}')
+              FILES=$(git diff --name-only --diff-filter=ACM --relative=submissions $BASE_BRANCH...$PR_BRANCH  submissions | grep -i -E '\.(gds|oas)$' | awk '{print $2}')
+              #FILES=$(git diff --name-status --diff-filter=ACM --relative=submissions ${{ github.event.before }} ${{ github.sha }} submissions | grep -i -E '\.(gds|oas)$' | awk '{print $2}')
             fi
           fi
                  
