@@ -273,7 +273,7 @@ for f in [f for f in files_in if '.oas' in f.lower() or '.gds' in f.lower()]:
             # Measure the height of the cell that was added, and move up
             y += max (cell_Height, subcell.bbox().height()) + cell_Gap_Height
             # move right and bottom when we reach the top of the chip
-            if y + cell_Height > chip_Height1 and x == 0:
+            if y + cell_Height > chip_Height1 and x < (cell_Width + cell_Gap_Width)*2:
                 y = cell_Height + cell_Gap_Height
                 x += cell_Width + cell_Gap_Width
             if y + cell_Height > chip_Height2:
