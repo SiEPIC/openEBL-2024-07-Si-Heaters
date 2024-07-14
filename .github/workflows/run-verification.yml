@@ -31,8 +31,13 @@ jobs:
 
       - name: Set up environment variables
         run: |
-          echo "PR_BRANCH=${{ github.ref_name }}" >> $GITHUB_ENV
-          echo "BASE_BRANCH=${{ github.base_ref }}" >> $GITHUB_ENV
+          echo "PR_BRANCH=${{ github.event.pull_request.head.ref }}" >> $GITHUB_ENV
+          echo "BASE_BRANCH=${{ github.event.pull_request.base.ref }}" >> $GITHUB_ENV
+
+      - name: Debug branch names
+        run: |
+          echo "PR_BRANCH=$PR_BRANCH"
+          echo "BASE_BRANCH=$BASE_BRANCH"
 
       - name: Fetch branches
         run: |
