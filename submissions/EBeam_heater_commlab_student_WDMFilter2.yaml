@@ -1,14 +1,14 @@
 Devices:
-  CommlabStudent_WDMFilter1:
-    device_id: CommlabStudent_WDMFilter1
+  commlab_student_WDMFilter2:
+    device_id: commlab_student_WDMFilter2
     device_type: device
     electricalCoordinates:
     - G
-    - 135.0
-    - 194.0
+    - 170.0
+    - 187.0
     opticalCoordinates:
-    - -192.0
-    - 47.0
+    - -170.0
+    - 63.0
     polarization: TE
     sequences:
     - test1(wavelength_sweep_ida)
