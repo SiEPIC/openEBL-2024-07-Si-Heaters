@@ -29,20 +29,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up environment variables
-        run: |
-          echo "PR_BRANCH=${{ github.event.pull_request.head.ref }}" >> $GITHUB_ENV
-          echo "BASE_BRANCH=${{ github.event.pull_request.base.ref }}" >> $GITHUB_ENV
 
-      - name: Debug branch names
+      - name: get changed files
+        uses: jitterbit/get-changed-files@v1
         run: |
-          echo "PR_BRANCH=$PR_BRANCH"
-          echo "BASE_BRANCH=$BASE_BRANCH"
-
-      - name: Fetch branches
-        run: |
-          git fetch origin $PR_BRANCH
-          git fetch origin $BASE_BRANCH
+          for changed_file in ${{ steps.files.outputs.all }}; do
+            echo "Do something with this ${changed_file}."
+          done
 
 
       - name: write what triggered this workflow to a txt file
