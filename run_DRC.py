@@ -28,19 +28,19 @@ try:
    layout = pya.Layout()
    layout.read(gds_file)
 except:
-   print('Error loading layout')
+   print('Error loading layout\n')
    num_errors = 1
 
 # get top cell from layout
 try:
    # get top cell from layout
    if len(layout.top_cells()) != 1:
-      print('Error: the layout needs to have only 1 top cell. It has %s.' % len(layout.top_cells()))
+      print('Error: the layout needs to have only 1 top cell. It has %s.\n' % len(layout.top_cells()))
       num_errors += 1
 
    top_cell = layout.top_cell()
 except:
-   print('Unknown error occurred')
+   print('Unknown error occurred.\n')
    num_errors = 1
 
 '''
@@ -76,7 +76,7 @@ def check_space_width (cell, rule_table_space_width, tolerance=1):
         tolerance: int, subtract from the rule
     '''
 
-    errors = 'Manufacturing Design Rule Check (DRC)\n'
+    errors = 'Manufacturing Design Rule Check (DRC):\n'
     num_errors = 0
     for rule in rule_table_space_width:
         r = pya.Region(cell.begin_shapes_rec(cell.layout().layer(rule[1], rule[2])))
@@ -89,7 +89,7 @@ def check_space_width (cell, rule_table_space_width, tolerance=1):
             errors += ' - Layer %s, Width %s nm minimum, %s error(s).\n' % (rule[0], rule[4], len(e))
             num_errors += len(e)
     if num_errors == 0:
-        errors += ' - No Space/Width errors detected.'
+        errors += ' - No Space/Width errors detected.\n'
     return num_errors, errors
 
 num_errors, errors = check_space_width (layout.top_cell(), rule_table_space_width)
