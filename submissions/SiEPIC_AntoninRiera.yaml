@@ -1,0 +1,120 @@
+Devices:
+  RingDoubleTEr10g100:
+    device_id: RingDoubleTEr10g100
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 494.0
+    - 380.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+  RingDoubleTEr10g70:
+    device_id: RingDoubleTEr10g70
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 281.0
+    - 380.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+  RingDoubleTEr10g80:
+    device_id: RingDoubleTEr10g80
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 352.0
+    - 380.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+  RingDoubleTEr10g90:
+    device_id: RingDoubleTEr10g90
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 423.0
+    - 380.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+  RingDoubleTEr15g100:
+    device_id: RingDoubleTEr15g100
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 565.0
+    - 380.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+  RingDoubleTEr3g70:
+    device_id: RingDoubleTEr3g70
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 40.0
+    - 380.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+  RingDoubleTEr5g70:
+    device_id: RingDoubleTEr5g70
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 101.0
+    - 380.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+  RingDoubleTEr5g80:
+    device_id: RingDoubleTEr5g80
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 161.0
+    - 380.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+  RingDoubleTEr5g90:
+    device_id: RingDoubleTEr5g90
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 221.0
+    - 380.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+Sequences:
+  (wavelength_sweep_ida):
+    Runtime: 25.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: WavelengthSweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Wavelength (nm)
+      yscale: '1'
+      ytitle: Power (dBm)
+    variables:
+      Initialrange: '-20'
+      Laser Output: High Power
+      Numscans: '1'
+      Power: '1'
+      RangeDec: '20'
+      Start: '1480'
+      Step: '1'
+      Stop: '1580'
+      Sweep Speed: auto
