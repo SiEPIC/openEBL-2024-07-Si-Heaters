@@ -60,7 +60,7 @@ rule_table_space_width = [
     ['Silicon 1/0', 1,0,70,60],
     ['Silicon Nitride 1/5', 1,5,120,120],
     ['M1 Heater 11/0', 11,0,3000,3000],
-    ['M2 Routing metal', 12,0,5000,8000],
+    ['M2 Routing metal', 12,0,8000,5000],
     ['Metal Pad open', 13,0,10000,10000],
 ]
 
