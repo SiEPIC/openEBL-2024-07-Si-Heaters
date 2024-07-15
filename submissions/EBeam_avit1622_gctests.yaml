@@ -1,44 +1,66 @@
 Devices:
-  avit1622_gcteI:
-    device_id: avit1622_gcteI
+  avit1622_gc-te-2port-in1:
+    device_id: avit1622_gc-te-2port-in1
     device_type: device
     electricalCoordinates: []
     opticalCoordinates:
-    - -115.0
-    - 265.0
+    - -176.0
+    - 216.0
     polarization: TE
     sequences:
     - (wavelength_sweep_ida)
     wavelength: '1550'
-  avit1622_gctmI:
-    device_id: avit1622_gctmI
+  avit1622_gc-te-2port-in2:
+    device_id: avit1622_gc-te-2port-in2
     device_type: device
     electricalCoordinates: []
     opticalCoordinates:
-    - -113.0
-    - 58.0
+    - -176.0
+    - -108.0
+    polarization: TE
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+  avit1622_gc-te-3port-in1:
+    device_id: avit1622_gc-te-3port-in1
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 39.0
+    - 214.0
+    polarization: TE
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+  avit1622_gc-tm-2port-in2:
+    device_id: avit1622_gc-tm-2port-in2
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -63.0
+    - -109.0
     polarization: TM
     sequences:
     - (wavelength_sweep_ida)
     wavelength: '1550'
-  avit1622_polindep2x5x6teI:
-    device_id: avit1622_polindep2x5x6teI
+  avit1622_gc-tm-2portin1:
+    device_id: avit1622_gc-tm-2portin1
     device_type: device
     electricalCoordinates: []
     opticalCoordinates:
-    - -17.0
-    - 268.0
-    polarization: TE
+    - -61.0
+    - 216.0
+    polarization: TM
     sequences:
     - (wavelength_sweep_ida)
     wavelength: '1550'
-  avit1622_polindep2x5x6tmI:
-    device_id: avit1622_polindep2x5x6tmI
+  avit1622_gc-tm-3port-in1:
+    device_id: avit1622_gc-tm-3port-in1
     device_type: device
     electricalCoordinates: []
     opticalCoordinates:
-    - 100.0
-    - 268.0
+    - 116.0
+    - 215.0
     polarization: TM
     sequences:
     - (wavelength_sweep_ida)
