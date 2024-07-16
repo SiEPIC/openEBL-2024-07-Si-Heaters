@@ -1,0 +1,96 @@
+Devices:
+  ' RingResonator1':
+    device_id: ' RingResonator1'
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 49.0
+    - 435.0
+    polarization: TE
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+  ' RingResonator2':
+    device_id: ' RingResonator2'
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 127.0
+    - 370.0
+    polarization: TE
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+  ' RingResonator3':
+    device_id: ' RingResonator3'
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 197.0
+    - 414.0
+    polarization: TE
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+  ' RingResonator4':
+    device_id: ' RingResonator4'
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 263.0
+    - 300.0
+    polarization: TE
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+  ' RingResonator5':
+    device_id: ' RingResonator5'
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 328.0
+    - 380.0
+    polarization: TE
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+  ' RingResonator6':
+    device_id: ' RingResonator6'
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 400.0
+    - 340.0
+    polarization: TE
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+Routines:
+  (wavelength_sweep_ida):
+    Runtime: 25.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: WavelengthSweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Wavelength (nm)
+      yscale: '1'
+      ytitle: Power (dBm)
+    variables:
+      Initialrange: '-20'
+      Laser Output: High Power
+      Numscans: '1'
+      Power: '1'
+      RangeDec: '20'
+      Start: '1480'
+      Step: '1'
+      Stop: '1580'
+      Sweep Speed: auto

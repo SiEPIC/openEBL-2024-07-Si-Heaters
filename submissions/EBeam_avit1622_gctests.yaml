@@ -1,0 +1,96 @@
+Devices:
+  avit1622_gc-te-2port-in1:
+    device_id: avit1622_gc-te-2port-in1
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -176.0
+    - 216.0
+    polarization: TE
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+  avit1622_gc-te-2port-in2:
+    device_id: avit1622_gc-te-2port-in2
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -176.0
+    - -108.0
+    polarization: TE
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+  avit1622_gc-te-3port-in1:
+    device_id: avit1622_gc-te-3port-in1
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 39.0
+    - 214.0
+    polarization: TE
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+  avit1622_gc-tm-2port-in2:
+    device_id: avit1622_gc-tm-2port-in2
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -63.0
+    - -109.0
+    polarization: TM
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+  avit1622_gc-tm-2portin1:
+    device_id: avit1622_gc-tm-2portin1
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -61.0
+    - 216.0
+    polarization: TM
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+  avit1622_gc-tm-3port-in1:
+    device_id: avit1622_gc-tm-3port-in1
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 116.0
+    - 215.0
+    polarization: TM
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+Sequences:
+  (wavelength_sweep_ida):
+    Runtime: 25.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: WavelengthSweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Wavelength (nm)
+      yscale: '1'
+      ytitle: Power (dBm)
+    variables:
+      Initialrange: '-20'
+      Laser Output: Low SSE
+      Numscans: '3'
+      Power: '1'
+      RangeDec: '20'
+      Start: '1480'
+      Step: '0.01'
+      Stop: '1580'
+      Sweep Speed: auto

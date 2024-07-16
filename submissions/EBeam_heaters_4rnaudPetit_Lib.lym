@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<klayout-macro>
+ <description/>
+ <version/>
+ <category>pymacros</category>
+ <prolog/>
+ <epilog/>
+ <doc/>
+ <autorun>true</autorun>
+ <autorun-early>false</autorun-early>
+ <priority>0</priority>
+ <shortcut/>
+ <show-in-menu>false</show-in-menu>
+ <group-name/>
+ <menu-path/>
+ <interpreter>python</interpreter>
+ <dsl-interpreter-name/>
+ <text>import pya
+import math
+
+"""
+This sample PCell implements a library called "MyLib" with a single PCell that
+draws a circle. It demonstrates the basic implementation techniques for a PCell 
+and how to use the "guiding shape" feature to implement a handle for the circle
+radius.
+
+NOTE: after changing the code, the macro needs to be rerun to install the new
+implementation. The macro is also set to "auto run" to install the PCell 
+when KLayout is run.
+"""
+
+class DoubleRingSeries(pya.PCellDeclarationHelper):
+  """
+  The PCell declaration for the Disk resonator with one wave guide (bus).
+  """
+
+  def __init__(self):
+
+    # Important: initialize the super class
+    super(DoubleRingSeries, self).__init__()
+    
+    from SiEPIC.utils import get_technology_by_name    
+    TECHNOLOGY = get_technology_by_name('EBeam')
+
+    # declare the parameters
+    self.param("silayer", self.TypeLayer, "Si Layer", default = TECHNOLOGY['Si'])
+    self.param("r1", self.TypeDouble, "Radius 1", default = 15)
+    self.param("r2", self.TypeDouble, "Radius 2", default = 20)
+    self.param("w", self.TypeDouble, "Waveguide Width", default = 0.5)
+    self.param("g", self.TypeDouble, "Gap", default = 0.2)
+    self.param("orthogonal_identifier", self.TypeInt, "Orthogonal identifier (1=TE, 2=TM)", default = 2)     
+    self.param("pinrec", self.TypeLayer, "PinRec Layer", default = TECHNOLOGY['PinRec'])
+    self.param("devrec", self.TypeLayer, "DevRec Layer", default = TECHNOLOGY['DevRec'])
+    self.param("textl", self.TypeLayer, "Text Layer", default = TECHNOLOGY['Text'])
+
+  def display_text_impl(self):
+    # Provide a descriptive text for the cell
+    return "DoubleRingSeries(R1=" + ('%.3f' % self.r1) + ", R2=" + ('%.3f' % self.r2) + ",g=" + ('%g' % (1000*self.g)) + ",orthogonal_identifier=" + ('%s' % self.orthogonal_identifier) + ")"
+  
+  def can_create_from_shape_impl(self):
+    # Implement the "Create PCell from shape" protocol: we can use any shape which 
+    # has a finite bounding box
+    return False
+  
+  def produce_impl(self):
+  
+    # This is the main part of the implementation: create the layout
+
+    from math import pi, cos, sin, acos, ceil
+    from SiEPIC._globals import PIN_LENGTH
+    
+    dbu = self.layout.dbu
+    ly = self.layout
+    shapes = self.cell.shapes
+    
+    LayerSiN = ly.layer(self.silayer)
+    LayerPinRecN = ly.layer(self.pinrec)
+    LayerDevRecN = ly.layer(self.devrec)
+    TextLayerN = ly.layer(self.textl)
+    
+    w = int(round(self.w/dbu))
+    r1 = int(round(self.r1/dbu))
+    r2 = int(round(self.r2/dbu))
+    g = int(round(self.g/dbu))
+    
+    rmax = max(r1, r2)
+    x = 0
+    y1 = r1+w+g
+    y2 = 2 * (r1+w+g) + r2
+    wtop = 2* (r1+ r2) + 3 * (w+g)
+    theta_start = 0
+    theta_stop = 360
+    circle_fraction = abs(theta_stop - theta_start) / 360
+    
+    from SiEPIC.utils import arc_wg, arc_wg_xy
+    
+    from SiEPIC import __version__ 
+    
+    # Create the first ring
+    if __version__ &gt; '0.5.0':
+      self.cell.shapes(LayerSiN).insert(arc_wg_xy(x, y1, r1, w, 0, 360, dbu=dbu))  # dbu argument introduced in SiEPIC 0.5.1
+    else:
+      self.cell.shapes(LayerSiN).insert(arc_wg_xy(x, y1, r1, w, 0, 360))
+
+    
+    # Create the second ring
+    if __version__ &gt; '0.5.0':
+      self.cell.shapes(LayerSiN).insert(arc_wg_xy(x, y2, r2, w, 0, 360, dbu=dbu))  # dbu argument introduced in SiEPIC 0.5.1
+    else:
+      self.cell.shapes(LayerSiN).insert(arc_wg_xy(x, y2, r2, w, 0, 360))
+
+    
+    # Create the waveguides
+    wg1 = Box(-rmax-w/2-w, -w/2, rmax+w/2+w, w/2)
+    shapes(LayerSiN).insert(wg1)
+    #wg2 = Box(-rmax-w/2-w, wtop-w/2, rmax+w/2+w, wtop+w/2)
+    #shapes(LayerSiN).insert(wg2)
+    
+    # Pins on the bottom bus waveeguide side:
+    pin = Path([Point(-rmax-w/2-w+PIN_LENGTH/2, 0), Point(-rmax-w/2-w-PIN_LENGTH/2, 0)], w)
+    shapes(LayerPinRecN).insert(pin)
+    t = Trans(Trans.R0, -rmax-w/2-w, 0)
+    text = Text ("pin1", t)
+    shape = shapes(LayerPinRecN).insert(text)
+    shape.text_size = 0.4/dbu
+
+    pin = Path([Point(rmax+w/2+w-PIN_LENGTH/2, 0), Point(rmax+w/2+w+PIN_LENGTH/2, 0)], w)
+    shapes(LayerPinRecN).insert(pin)
+    t = Trans(Trans.R0, rmax+w/2+w, 0)
+    text = Text ("pin2", t)
+    shape = shapes(LayerPinRecN).insert(text)
+    shape.text_size = 0.4/dbu
+    
+    # Pins on the top bus waveeguide side:
+    #pin = Path([Point(-rmax-w/2-w+PIN_LENGTH/2, wtop), Point(-rmax-w/2-w-PIN_LENGTH/2, wtop)], w)
+    #shapes(LayerPinRecN).insert(pin)
+    #t = Trans(Trans.R0, -rmax-w/2-w, wtop)
+    #text = Text ("pin3", t)
+    #shape = shapes(LayerPinRecN).insert(text)
+    #shape.text_size = 0.4/dbu
+
+    #pin = Path([Point(rmax+w/2+w-PIN_LENGTH/2, wtop), Point(rmax+w/2+w+PIN_LENGTH/2, wtop)], w)
+    #shapes(LayerPinRecN).insert(pin)
+    #t = Trans(Trans.R0, rmax+w/2+w, wtop)
+    #text = Text ("pin4", t)
+    #shape = shapes(LayerPinRecN).insert(text)
+    #shape.text_size = 0.4/dbu
+    
+    # Merge all the waveguide shapes, to avoid any small gaps
+    layer_temp = self.layout.layer(LayerInfo(913, 0))
+    shapes_temp = self.cell.shapes(layer_temp)
+    ShapeProcessor().merge(self.layout,self.cell,LayerSiN,shapes_temp,True,0,True,True)
+    self.cell.shapes(LayerSiN).clear()
+    shapes_SiN = self.cell.shapes(LayerSiN)
+    ShapeProcessor().merge(self.layout,self.cell,layer_temp, shapes_SiN,True,0,True,True)
+    self.cell.shapes(layer_temp).clear()
+    
+    # Create the device recognition layer -- make it 1 * wg_width away from the waveguides.
+    dev = Box(-rmax-w/2-w, -w/2-w, rmax+w/2+w, wtop+w/2+w )
+    shapes(LayerDevRecN).insert(dev)
+    
+    # Compact model information
+    t = Trans(Trans.R0, rmax, 0)
+    text = Text ("Lumerical_INTERCONNECT_library=no model", t)
+    shape = shapes(LayerDevRecN).insert(text)
+    shape.text_size = self.r1*0.03/dbu
+    
+    t = Trans(Trans.R0, -rmax, rmax/4)
+    text = Text ('Component=DoubleRingSeries', t)
+    shape = shapes(LayerDevRecN).insert(text)
+    shape.text_size = self.r1*0.03/dbu
+
+    t = Trans(Trans.R0, -rmax, rmax/2)
+    text = Text ('Spice_param:wg_width=%.3g gap=%.3g radius1=%.3g radius2=%.3g orthogonal_identifier=%s'% (self.w*1e-6,self.g*1e-6,self.r1*1e-6,self.r2*1e-6, self.orthogonal_identifier), t)
+    shape = shapes(LayerDevRecN).insert(text)
+    shape.text_size = self.r1*0.03/dbu
+    
+    print("Done drawing the layout for - DoubleRingSeries: %.3f-%.3f-%g" % ( self.r1, self.r2, self.g) )
+
+class Disk_singlebus(pya.PCellDeclarationHelper):
+  """
+  The PCell declaration for the Disk resonator with one wave guide (bus).
+  """
+
+  def __init__(self):
+
+    # Important: initialize the super class
+    super(Disk_singlebus, self).__init__()
+    
+    from SiEPIC.utils import get_technology_by_name    
+    TECHNOLOGY = get_technology_by_name('EBeam')
+
+    # declare the parameters
+    self.param("silayer", self.TypeLayer, "Si Layer", default = TECHNOLOGY['Si'])
+    self.param("r", self.TypeDouble, "Radius", default = 10)
+    self.param("w", self.TypeDouble, "Waveguide Width", default = 0.5)
+    self.param("g", self.TypeDouble, "Gap", default = 0.2)
+    self.param("orthogonal_identifier", self.TypeInt, "Orthogonal identifier (1=TE, 2=TM)", default = 2)     
+    self.param("pinrec", self.TypeLayer, "PinRec Layer", default = TECHNOLOGY['PinRec'])
+    self.param("devrec", self.TypeLayer, "DevRec Layer", default = TECHNOLOGY['DevRec'])
+    self.param("textl", self.TypeLayer, "Text Layer", default = TECHNOLOGY['Text'])
+
+  def display_text_impl(self):
+    # Provide a descriptive text for the cell
+    return "ebeam_disk_res(R=" + ('%.3f' % self.r) + ",g=" + ('%g' % (1000*self.g)) + ",orthogonal_identifier=" + ('%s' % self.orthogonal_identifier) + ")"
+  
+  def can_create_from_shape_impl(self):
+    # Implement the "Create PCell from shape" protocol: we can use any shape which 
+    # has a finite bounding box
+    return False
+  
+  def produce_impl(self):
+  
+    # This is the main part of the implementation: create the layout
+
+    from math import pi, cos, sin, acos, ceil
+    from SiEPIC._globals import PIN_LENGTH
+    
+    dbu = self.layout.dbu
+    ly = self.layout
+    shapes = self.cell.shapes
+    
+    LayerSiN = ly.layer(self.silayer)
+    LayerPinRecN = ly.layer(self.pinrec)
+    LayerDevRecN = ly.layer(self.devrec)
+    TextLayerN = ly.layer(self.textl)
+    
+    w = int(round(self.w/dbu))
+    r = int(round(self.r/dbu))
+    g = int(round(self.g/dbu))
+    
+    # Create the circle (disk)
+    x = 0
+    y = r+w+g
+    theta_start = 0
+    theta_stop = 360
+    circle_fraction = abs(theta_stop - theta_start) / 360
+    
+    radius = r/100
+    err = dbu / 2  # in nm 
+    points_per_circle = int(ceil(pi / acos(1 - err / radius))) if radius &gt; 1 else 10 # Lukas' derivation (same answer as below)
+    
+    npoints = int(points_per_circle * circle_fraction)
+    
+    if npoints == 0:
+      npoints = 1
+    
+    da = 2 * pi / npoints * circle_fraction # incremets in radians
+    
+    pts = []
+    
+    th = theta_start / 360.0 * 2 * pi
+    
+    for i in range(0, npoints + 1):
+      pts.append(pya.Point.from_dpoint(pya.DPoint(
+        (x + (r + w/2) * cos(i * da + th)) /1, (y + (r + w/2) * sin (i * da + th))/ 1)))
+    
+    self.cell.shapes(LayerSiN).insert(pya.Polygon(pts))
+    
+    # Create the waveguide
+    wgl = Box(-r-w/2-w, -w/2, r+w/2+w, w/2)
+    shapes(LayerSiN).insert(wgl)
+    
+    # Pins on the bus waveeguide side:
+    pin = Path([Point(-r-w/2-w+PIN_LENGTH/2, 0), Point(-r-w/2-w-PIN_LENGTH/2, 0)], w)
+    shapes(LayerPinRecN).insert(pin)
+    t = Trans(Trans.R0, -r-w/2-w, 0)
+    text = Text ("pin1", t)
+    shape = shapes(LayerPinRecN).insert(text)
+    shape.text_size = 0.4/dbu
+
+    pin = Path([Point(r+w/2+w-PIN_LENGTH/2, 0), Point(r+w/2+w+PIN_LENGTH/2, 0)], w)
+    shapes(LayerPinRecN).insert(pin)
+    t = Trans(Trans.R0, r+w/2+w, 0)
+    text = Text ("pin2", t)
+    shape = shapes(LayerPinRecN).insert(text)
+    shape.text_size = 0.4/dbu
+    
+    # Merge all the waveguide shapes, to avoid any small gaps
+    layer_temp = self.layout.layer(LayerInfo(913, 0))
+    shapes_temp = self.cell.shapes(layer_temp)
+    ShapeProcessor().merge(self.layout,self.cell,LayerSiN,shapes_temp,True,0,True,True)
+    self.cell.shapes(LayerSiN).clear()
+    shapes_SiN = self.cell.shapes(LayerSiN)
+    ShapeProcessor().merge(self.layout,self.cell,layer_temp, shapes_SiN,True,0,True,True)
+    self.cell.shapes(layer_temp).clear()
+    
+    # Create the device recognition layer -- make it 1 * wg_width away from the waveguides.
+    dev = Box(-r-w/2-w, -w/2-w, r+w/2+w, y+r+w/2+w )
+    shapes(LayerDevRecN).insert(dev)
+    
+    # Compact model information
+    t = Trans(Trans.R0, -r, 0)
+    text = Text ("Lumerical_INTERCONNECT_library=Design kits/ebeam", t)
+    shape = shapes(LayerDevRecN).insert(text)
+    shape.text_size = self.r*0.03/dbu
+    
+    t = Trans(Trans.R0, -r, r/4)
+    text = Text ('Component=ebeam_disk_singlebus', t)
+    shape = shapes(LayerDevRecN).insert(text)
+    shape.text_size = self.r*0.03/dbu
+
+    t = Trans(Trans.R0, -r, r/2)
+    text = Text ('Spice_param:wg_width=%.3g gap=%.3g radius=%.3g orthogonal_identifier=%s'% (self.w*1e-6,self.g*1e-6,self.r*1e-6, self.orthogonal_identifier), t)
+    shape = shapes(LayerDevRecN).insert(text)
+    shape.text_size = self.r*0.03/dbu
+    
+    print("Done drawing the layout for - ebeam_disk_singlebus: %.3f-%g" % ( self.r, self.g) )
+
+class Ring_singlebus(pya.PCellDeclarationHelper):
+  """
+  The PCell declaration for the Disk resonator with one wave guide (bus).
+  """
+
+  def __init__(self):
+
+    # Important: initialize the super class
+    super(Ring_singlebus, self).__init__()
+    
+    from SiEPIC.utils import get_technology_by_name    
+    TECHNOLOGY = get_technology_by_name('EBeam')
+
+    # declare the parameters
+    self.param("silayer", self.TypeLayer, "Si Layer", default = TECHNOLOGY['Si'])
+    self.param("r", self.TypeDouble, "Radius", default = 10)
+    self.param("w", self.TypeDouble, "Waveguide Width", default = 0.5)
+    self.param("g", self.TypeDouble, "Gap", default = 0.2)
+    self.param("orthogonal_identifier", self.TypeInt, "Orthogonal identifier (1=TE, 2=TM)", default = 2)     
+    self.param("pinrec", self.TypeLayer, "PinRec Layer", default = TECHNOLOGY['PinRec'])
+    self.param("devrec", self.TypeLayer, "DevRec Layer", default = TECHNOLOGY['DevRec'])
+    self.param("textl", self.TypeLayer, "Text Layer", default = TECHNOLOGY['Text'])
+
+  def display_text_impl(self):
+    # Provide a descriptive text for the cell
+    return "ebeam_disk_res(R=" + ('%.3f' % self.r) + ",g=" + ('%g' % (1000*self.g)) + ",orthogonal_identifier=" + ('%s' % self.orthogonal_identifier) + ")"
+  
+  def can_create_from_shape_impl(self):
+    # Implement the "Create PCell from shape" protocol: we can use any shape which 
+    # has a finite bounding box
+    return False
+  
+  def produce_impl(self):
+  
+    # This is the main part of the implementation: create the layout
+
+    from math import pi, cos, sin, acos, ceil
+    from SiEPIC._globals import PIN_LENGTH
+    
+    dbu = self.layout.dbu
+    ly = self.layout
+    shapes = self.cell.shapes
+    
+    LayerSiN = ly.layer(self.silayer)
+    LayerPinRecN = ly.layer(self.pinrec)
+    LayerDevRecN = ly.layer(self.devrec)
+    TextLayerN = ly.layer(self.textl)
+    
+    w = int(round(self.w/dbu))
+    r = int(round(self.r/dbu))
+    g = int(round(self.g/dbu))
+    
+    # Create the circle (disk)
+    x = 0
+    y = r+w+g
+    theta_start = 0
+    theta_stop = 360
+    circle_fraction = abs(theta_stop - theta_start) / 360
+    
+    from SiEPIC.utils import arc_wg, arc_wg_xy
+    
+    from SiEPIC import __version__ 
+    
+    # Create the first ring
+    if __version__ &gt; '0.5.0':
+      self.cell.shapes(LayerSiN).insert(arc_wg_xy(x, y, r, w, 0, 360, dbu=dbu))  # dbu argument introduced in SiEPIC 0.5.1
+    else:
+      self.cell.shapes(LayerSiN).insert(arc_wg_xy(x, y, r, w, 0, 360))
+    
+    # Create the waveguide
+    wgl = Box(-r-w/2-w, -w/2, r+w/2+w, w/2)
+    shapes(LayerSiN).insert(wgl)
+    
+    # Pins on the bus waveeguide side:
+    pin = Path([Point(-r-w/2-w+PIN_LENGTH/2, 0), Point(-r-w/2-w-PIN_LENGTH/2, 0)], w)
+    shapes(LayerPinRecN).insert(pin)
+    t = Trans(Trans.R0, -r-w/2-w, 0)
+    text = Text ("pin1", t)
+    shape = shapes(LayerPinRecN).insert(text)
+    shape.text_size = 0.4/dbu
+
+    pin = Path([Point(r+w/2+w-PIN_LENGTH/2, 0), Point(r+w/2+w+PIN_LENGTH/2, 0)], w)
+    shapes(LayerPinRecN).insert(pin)
+    t = Trans(Trans.R0, r+w/2+w, 0)
+    text = Text ("pin2", t)
+    shape = shapes(LayerPinRecN).insert(text)
+    shape.text_size = 0.4/dbu
+    
+    # Merge all the waveguide shapes, to avoid any small gaps
+    layer_temp = self.layout.layer(LayerInfo(913, 0))
+    shapes_temp = self.cell.shapes(layer_temp)
+    ShapeProcessor().merge(self.layout,self.cell,LayerSiN,shapes_temp,True,0,True,True)
+    self.cell.shapes(LayerSiN).clear()
+    shapes_SiN = self.cell.shapes(LayerSiN)
+    ShapeProcessor().merge(self.layout,self.cell,layer_temp, shapes_SiN,True,0,True,True)
+    self.cell.shapes(layer_temp).clear()
+    
+    # Create the device recognition layer -- make it 1 * wg_width away from the waveguides.
+    dev = Box(-r-w/2-w, -w/2-w, r+w/2+w, y+r+w/2+w )
+    shapes(LayerDevRecN).insert(dev)
+    
+    # Compact model information
+    t = Trans(Trans.R0, -r, 0)
+    text = Text ("Lumerical_INTERCONNECT_library=Design kits/ebeam", t)
+    shape = shapes(LayerDevRecN).insert(text)
+    shape.text_size = self.r*0.03/dbu
+    
+    t = Trans(Trans.R0, -r, r/4)
+    text = Text ('Component=ebeam_ring_singlebus', t)
+    shape = shapes(LayerDevRecN).insert(text)
+    shape.text_size = self.r*0.03/dbu
+
+    t = Trans(Trans.R0, -r, r/2)
+    text = Text ('Spice_param:wg_width=%.3g gap=%.3g radius=%.3g orthogonal_identifier=%s'% (self.w*1e-6,self.g*1e-6,self.r*1e-6, self.orthogonal_identifier), t)
+    shape = shapes(LayerDevRecN).insert(text)
+    shape.text_size = self.r*0.03/dbu
+    
+    print("Done drawing the layout for - ebeam_ring_singlebus: %.3f-%g" % ( self.r, self.g) )
+
+
+class ArnaudLib(pya.Library):
+  """
+  The library where we will put the PCell into 
+  """
+
+  def __init__(self):
+  
+    # Set the description
+    self.description = "My First Library"
+    
+    # Create the PCell declarations
+    self.layout().register_pcell("Ring_singlebus", Ring_singlebus())
+    self.layout().register_pcell("Disk_singlebus", Disk_singlebus())
+    self.layout().register_pcell("DoubleRingSeries", DoubleRingSeries())
+    # That would be the place to put in more PCells ...
+    
+    # Register us with the name "MyLib".
+    # If a library with that name already existed, it will be replaced then.
+    self.register("ArnaudLib")
+
+
+# Instantiate and register the library
+ArnaudLib()
+</text>
+</klayout-macro>

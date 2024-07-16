@@ -18,6 +18,9 @@ Jasmina Brar 12/08/23
 # gds file to run verification on
 gds_file = sys.argv[1]
 
+if "framework/EBL_Framework_1cm_PCM_static" in gds_file:
+    exit()
+
 # load into layout
 layout = pya.Layout()
 layout.read(gds_file)
@@ -42,7 +45,7 @@ filename = gds_file.split(".")[0]
 file_lyrdb = os.path.join(path,filename+'.lyrdb')
 
 # run verification
-num_errors = layout_check(cell = top_cell, verbose=True, GUI=True, file_rdb=file_lyrdb)
+num_errors = layout_check(cell = top_cell, verbose=False, GUI=True, file_rdb=file_lyrdb)
 
 # Print the result value to standard output
 print(num_errors)

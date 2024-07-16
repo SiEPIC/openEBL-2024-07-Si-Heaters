@@ -1,0 +1,74 @@
+Devices:
+  aonurdasdemir_gcteK:
+    device_id: aonurdasdemir_gcteK
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -117.0
+    - 241.0
+    polarization: TE
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+  aonurdasdemir_gctmK:
+    device_id: aonurdasdemir_gctmK
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -115.0
+    - -9.0
+    polarization: TM
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+  aonurdasdemir_poldepte24K:
+    device_id: aonurdasdemir_poldepte24K
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -9.0
+    - 243.0
+    polarization: TE
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+  aonurdasdemir_poldeptm24K:
+    device_id: aonurdasdemir_poldeptm24K
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 126.0
+    - 242.0
+    polarization: TM
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+Sequences:
+  (wavelength_sweep_ida):
+    Runtime: 25.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: WavelengthSweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Wavelength (nm)
+      yscale: '1'
+      ytitle: Power (dBm)
+    variables:
+      Initialrange: '-20'
+      Laser Output: Low SSE
+      Numscans: '3'
+      Power: '1'
+      RangeDec: '20'
+      Start: '1480'
+      Step: '0.01'
+      Stop: '1580'
+      Sweep Speed: auto

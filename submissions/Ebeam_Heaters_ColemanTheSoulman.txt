@@ -1,0 +1,9 @@
+% X-coord, Y-coord, Polarization, wavelength, type, deviceID, params 
+-181, 190, TE, 1550, device, ColemanTheSoulmanTEMZI1a, comment
+-176, -31, TM, 1550, device, ColemanTheSoulmanTMMZI1a, comment
+
+% X-coord, Y-coord, deviceID, padName, params 
+157, 183, ColemanTheSoulmanTEMZI1a, comment, comment
+150, -77, ColemanTheSoulmanTMMZI1a, comment, comment
+
+% X-coord, Y-coord, recipeID, params 

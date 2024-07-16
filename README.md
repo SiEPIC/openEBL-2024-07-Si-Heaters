@@ -15,6 +15,7 @@
   - Oxide cladding
   - TiW metal heater, and Au metal bond pads
 - Details: [Slides](https://docs.google.com/presentation/d/1_ppHYec6LydML4RMRJdNI4DXHb0hgW7znToQCGgSF6M)
+  - design size: 470 µm height x 440 µm width
 - Process Design Kit: [SiEPIC-EBeam-PDK](https://github.com/siepic/SiEPIC_EBeam_PDK) 
 
 ## Layer table
@@ -56,6 +57,9 @@ sc.launch()
    - SiEPIC_username.oas: for the <a href="https://www.cmc.ca/passive-silicon-photonics-fabrication-workshop-2023">CMC SiEPIC Passives silicon photonics workshop</a>
    - SiEPIC_username.oas: for the <a href="https://www.cmc.ca/active-silicon-photonics-fabrication-workshop-2024">CMC SiEPIC Actives silicon photonics workshop</a>
    - For example: EBeam_LukasChrostowski_rings.oas
+ - Verify your design, using both:
+   - Design Rule Check (DRC), to check for manufacturability.  KLayout > SiEPIC > Verification > KLayout Design Rule Check (DRC) - EBeam, or press the ***"d" hotkey***.
+   - Functional Verification, to check for optical circuit connectivity, testability.  KLayout > SiEPIC > Verification > Functional Layout Check, or press the ***"v" hotkey***.
  - Create your YAML test routines file, following the same filename requirements as above, but ending with extension .yaml.
  - Ensure that your fork is up to date with the main SiEPIC repository.  Click "Sync fork" <img width="671" alt="image" src="https://github.com/SiEPIC/openEBL-2024-05/assets/15843200/256c87dc-dd68-4606-8529-6c7f6ecf41fa">
  - Upload your design(s) into the "submissions" folder, as a binary file, namely a .gds (GDSII format) or .oas (OASIS format) file, and the YAML test routine file.
@@ -90,5 +94,5 @@ The verification and merging is performed using GitHub actions. The repository i
 ## Latest Merge Layout File
 
 <!-- start-link -->
-https://github.com/SiEPIC/openEBL-2024-07-Si-Heaters/actions/runs/9913697584/artifacts/1696684206
+https://github.com/SiEPIC/openEBL-2024-07-Si-Heaters/actions/runs/9948188844/artifacts/1704114458
 <!-- end-link -->

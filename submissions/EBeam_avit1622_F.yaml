@@ -1,0 +1,85 @@
+Devices:
+  avit1622_gcteF:
+    device_id: avit1622_gcteF
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -110.0
+    - 262.0
+    polarization: TE
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+  avit1622_gctmF:
+    device_id: avit1622_gctmF
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -108.0
+    - 56.0
+    polarization: TM
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+  avit1622_polindep2x5x1tmF:
+    device_id: avit1622_polindep2x5x1tmF
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 216.0
+    - 264.0
+    polarization: TM
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+  avit1622_polindep2x5x2teF:
+    device_id: avit1622_polindep2x5x2teF
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 105.0
+    - 264.0
+    polarization: TE
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+  avit1622_polindep2x5x2tmF:
+    device_id: avit1622_polindep2x5x2tmF
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -10.0
+    - 264.0
+    polarization: TM
+    sequences:
+    - (wavelength_sweep_ida)
+    wavelength: '1550'
+Sequences:
+  (wavelength_sweep_ida):
+    Runtime: 25.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: WavelengthSweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Wavelength (nm)
+      yscale: '1'
+      ytitle: Power (dBm)
+    variables:
+      Initialrange: '-20'
+      Laser Output: Low SSE
+      Numscans: '3'
+      Power: '1'
+      RangeDec: '20'
+      Start: '1480'
+      Step: '0.01'
+      Stop: '1580'
+      Sweep Speed: auto

@@ -1,0 +1,194 @@
+Devices:
+  ColemanTheSoulManTMMZI1:
+    device_id: ColemanTheSoulManTMMZI1
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -176.0
+    - -31.0
+    polarization: TE
+    sequences: []
+    wavelength: '1550'
+  ColemanTheSoulmanTEMZI1a:
+    device_id: ColemanTheSoulmanTEMZI1a
+    device_type: device
+    electricalCoordinates:
+    - G
+    - 157.0
+    - 183.0
+    opticalCoordinates:
+    - -181.0
+    - 190.0
+    polarization: TE
+    sequences:
+    - (wavelength_sweep_ida)
+    - (set_voltage_wavelength_sweep_ida)
+    - (set_current_wavelength_sweep_ida)
+    - (set_wavelength_current_sweep_ida)
+    - (set_wavelength_voltage_sweep_ida)
+    wavelength: '1550'
+  ColemanTheSoulmanTMMZI1:
+    device_id: ColemanTheSoulmanTMMZI1
+    device_type: device
+    electricalCoordinates:
+    - G
+    - 157.0
+    - -69.0
+    opticalCoordinates:
+    - -176.0
+    - -31.0
+    polarization: TM
+    sequences:
+    - (wavelength_sweep_ida)
+    - (set_voltage_wavelength_sweep_ida)
+    - (set_current_wavelength_sweep_ida)
+    - (set_wavelength_current_sweep_ida)
+    - (set_wavelength_voltage_sweep_ida)
+    wavelength: '1550'
+Sequences:
+  (set_current_wavelength_sweep_ida):
+    Runtime: 75.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: Set Current Wavelength Sweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Wavelength (nm)
+      yscale: '1'
+      ytitle: Power (dBm)
+    variables:
+      Channel A: 'True'
+      Channel B: 'False'
+      Currents: 0, 1, 2
+      Initialrange: '-20'
+      Laser Output: High Power
+      Numscans: '2'
+      Power: '1'
+      RangeDec: '20'
+      Start: '1480'
+      Step: '1'
+      Stop: '1580'
+      Sweep Speed: 20nm
+  (set_voltage_wavelength_sweep_ida):
+    Runtime: 75.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: Set Voltage Wavelength Sweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Wavelength (nm)
+      yscale: '1'
+      ytitle: Power (dBm)
+    variables:
+      Channel A: 'True'
+      Channel B: 'False'
+      Initialrange: '-20'
+      Laser Output: High Power
+      Numscans: '2'
+      Power: '0'
+      RangeDec: '20'
+      Start: '1480'
+      Step: '1'
+      Stop: '1580'
+      Sweep Speed: 20nm
+      Voltages: 0, 1, 2
+  (set_wavelength_current_sweep_ida):
+    Runtime: 30.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: Set Wavelength Current Sweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Current (A)
+      yscale: '1'
+      ytitle: Voltage (V)
+    variables:
+      Channel A: 'True'
+      Channel B: 'False'
+      IV: 'True'
+      PV: 'True'
+      RV: 'True'
+      Start: '0'
+      Step: '0.1'
+      Stop: '2'
+      Wavelengths: 1480, 1550, 1580
+  (set_wavelength_voltage_sweep_ida):
+    Runtime: 3.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: Set Wavelength Voltage Sweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Voltage (V)
+      yscale: '1'
+      ytitle: Current (A)
+    variables:
+      Channel A: 'True'
+      Channel B: 'False'
+      IV: 'True'
+      PV: 'True'
+      RV: 'True'
+      Start: '0'
+      Step: '0.1'
+      Stop: '2'
+      Wavelengths: 1480, 1550, 1580
+  (wavelength_sweep_ida):
+    Runtime: 25.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: WavelengthSweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Wavelength (nm)
+      yscale: '1'
+      ytitle: Power (dBm)
+    variables:
+      Initialrange: '-20'
+      Laser Output: High Power
+      Numscans: '2'
+      Power: '0'
+      RangeDec: '20'
+      Start: '1480'
+      Step: '1'
+      Stop: '1580'
+      Sweep Speed: 20nm

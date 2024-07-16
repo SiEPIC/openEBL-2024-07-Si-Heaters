@@ -1,0 +1,141 @@
+Devices:
+  NYUADInt1:
+    device_id: NYUADInt1
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -201.0
+    - 365.0
+    polarization: TE
+    sequences:
+    - (wavelength_sweep_ida)
+    - (voltage_sweep_ida)
+    - (set_wavelength_voltage_sweep_ida)
+    - (set_wavelength_current_sweep_ida)
+    wavelength: '1550'
+  NYUADInt2:
+    device_id: NYUADInt2
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -201.0
+    - 38.0
+    polarization: TE
+    sequences:
+    - (wavelength_sweep_ida)
+    - (voltage_sweep_ida)
+    - (set_wavelength_voltage_sweep_ida)
+    - (set_wavelength_current_sweep_ida)
+    wavelength: '1550'
+Sequences:
+  (set_wavelength_current_sweep_ida):
+    Runtime: 150.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: Set Wavelength Current Sweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Current (A)
+      yscale: '1'
+      ytitle: Voltage (V)
+    variables:
+      Channel A: 'True'
+      Channel B: 'False'
+      IV: 'True'
+      PV: 'True'
+      RV: 'True'
+      Start: '0'
+      Step: '0.1'
+      Stop: '10'
+      Wavelengths: 1548.59, 1551, 1553.35
+  (set_wavelength_voltage_sweep_ida):
+    Runtime: 3.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: Set Wavelength Voltage Sweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Voltage (V)
+      yscale: '1'
+      ytitle: Current (A)
+    variables:
+      Channel A: 'True'
+      Channel B: 'False'
+      IV: 'True'
+      PV: 'True'
+      RV: 'True'
+      Start: '0'
+      Step: '0.1'
+      Stop: '2'
+      Wavelengths: 1548.59, 1551, 1553.35
+  (voltage_sweep_ida):
+    Runtime: 10.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'True'
+      plottitle: Voltage Sweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Voltage (V)
+      yscale: '1'
+      ytitle: Current (A)
+    variables:
+      Channel A: 'True'
+      Channel B: 'False'
+      IV: 'True'
+      PV: 'True'
+      RV: 'True'
+      Start: '0'
+      Step: '0.1'
+      Stop: '2'
+  (wavelength_sweep_ida):
+    Runtime: 25.0
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: WavelengthSweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Wavelength (nm)
+      yscale: '1'
+      ytitle: Power (dBm)
+    variables:
+      Initialrange: '-20'
+      Laser Output: High Power
+      Numscans: '1'
+      Power: '1'
+      RangeDec: '20'
+      Start: '1480'
+      Step: '0.1'
+      Stop: '1580'
+      Sweep Speed: auto
