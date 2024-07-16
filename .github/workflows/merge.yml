@@ -118,5 +118,6 @@ jobs:
               repo: context.repo.repo,
               body: commentBody
             });
-        if: ${{ github.event.pull_request.opened || github.event.pull_request.synchronize || github.event.pull_request.reopened }}
+        if: ${{ github.event.pull_request_target.opened || github.event.pull_request_target.synchronize || github.event.pull_request_target.reopened }}
 
+        # github.event.pull_request.merged == true
