@@ -72,6 +72,9 @@ jobs:
           
       - name: update url in runner README 
         run: |
+          # pull, in case there were changes since the start of this action
+          git pull
+          
           start_delim="<!-- start-link -->"
           end_delim="<!-- end-link -->"
           
