@@ -94,5 +94,5 @@ The verification and merging is performed using GitHub actions. The repository i
 ## Latest Merge Layout File
 
 <!-- start-link -->
-https://github.com/SiEPIC/openEBL-2024-07-Si-Heaters/actions/runs/9950895235/artifacts/1704709024
+https://github.com/SiEPIC/openEBL-2024-07-Si-Heaters/actions/runs/9951005857/artifacts/1704749296
 <!-- end-link -->
