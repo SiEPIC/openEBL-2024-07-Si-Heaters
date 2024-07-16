@@ -1,0 +1,1976 @@
+SiEPIC-Tools 0.5.10, layout merge, running KLayout 0.29.1 
+Date: 2024-07-15, 23:00:20 local time
+
+Loading: 2x2_ring_switch_v10.gds, dated 20240712_2007
+  - course name: unknown
+  - top cell: TOP
+  - loading layer: 998/0
+  - loading layer: 11/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - loading layer: 13/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_RingSwitch0
+  - measurement label: opt_in_TE_1550_device_RingSwitch1
+  - bounding box: (-147,-127;439853,469873)
+  - Placed at position: 0, 478000
+
+Loading: Chandler_Parkin_Fill_Factor_0p3188_BP169Lossiness1.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_833bb642
+  - loading layer: 1/0
+  - loading layer: 10/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessBff0p3188bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessDff0p3188bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessAff0p3188bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessCff0p3188bp169
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 0, 956000
+
+Loading: Chandler_Parkin_Fill_Factor_0p3188_BP169Phase.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_04e28e0f
+  - loading layer: 1/0
+  - deleting layer: 200/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 10/0
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorBff0p3188bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorAff0p3188bp169
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 0, 1434000
+
+Loading: Chandler_Parkin_Fill_Factor_0p3188_BP170Lossiness1.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_e8c6652d
+  - loading layer: 1/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 10/0
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessBff0p3188bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessDff0p3188bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessAff0p3188bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessCff0p3188bp170
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 0, 1912000
+
+Loading: Chandler_Parkin_Fill_Factor_0p3188_BP170Phase.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_e91b2b77
+  - loading layer: 1/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - loading layer: 10/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorBff0p3188bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorAff0p3188bp170
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 0, 2390000
+
+Loading: Chandler_Parkin_Fill_Factor_0p3188_BP171Phase.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_6298bf6c
+  - loading layer: 1/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorBff0p3188bp171
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorAff0p3188bp171
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 0, 2868000
+
+Loading: Chandler_Parkin_Fill_Factor_0p325_BP169Lossiness1.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_b9fed90b
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - deleting layer: 1/99
+  - loading layer: 68/0
+  - loading layer: 10/0
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessBff0p325bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessDff0p325bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessAff0p325bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessCff0p325bp169
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 0, 3346000
+
+Loading: Chandler_Parkin_Fill_Factor_0p325_BP169Phase.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_fa39e878
+  - loading layer: 1/0
+  - deleting layer: 200/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - loading layer: 10/0
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorBff0p325bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorAff0p325bp169
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 0, 3824000
+
+Loading: Chandler_Parkin_Fill_Factor_0p325_BP170Lossiness1.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_39946e90
+  - loading layer: 1/0
+  - loading layer: 10/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessBff0p325bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessDff0p325bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessAff0p325bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessCff0p325bp170
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 0, 4302000
+
+Loading: Chandler_Parkin_Fill_Factor_0p325_BP170Phase.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_718128e1
+  - loading layer: 1/0
+  - deleting layer: 1/99
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 10/0
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorBff0p325bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorAff0p325bp170
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 0, 4780000
+
+Loading: Chandler_Parkin_Fill_Factor_0p325_BP171Phase.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_e245797d
+  - loading layer: 1/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 10/0
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorBff0p325bp171
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorAff0p325bp171
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 0, 5258000
+
+Loading: Chandler_Parkin_Fill_Factor_0p3319_BP169Lossiness1.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_7068ab72
+  - loading layer: 1/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 10/0
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessBff0p3319bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessDff0p3319bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessAff0p3319bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessCff0p3319bp169
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 0, 5736000
+
+Loading: Chandler_Parkin_Fill_Factor_0p3319_BP169Phase.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_70c3e3b6
+  - loading layer: 1/0
+  - deleting layer: 200/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorBff0p3319bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorAff0p3319bp169
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 0, 6214000
+
+Loading: Chandler_Parkin_Fill_Factor_0p3319_BP170Lossiness1.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_ed2238bb
+  - loading layer: 1/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 10/0
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessBff0p3319bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessDff0p3319bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessAff0p3319bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessCff0p3319bp170
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 0, 6692000
+
+Loading: Chandler_Parkin_Fill_Factor_0p3319_BP170Phase.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_d208e8bb
+  - loading layer: 1/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 10/0
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorBff0p3319bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorAff0p3319bp170
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 0, 7170000
+
+Loading: Chandler_Parkin_Fill_Factor_0p3319_BP171Phase.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_4ef57a7f
+  - loading layer: 1/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorBff0p3319bp171
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorAff0p3319bp171
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 0, 7648000
+
+Loading: Chandler_Parkin_Fill_Factor_0p337_BP169Lossiness1.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_a3bc99dc
+  - loading layer: 1/0
+  - deleting layer: 1/99
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 10/0
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessBff0p337bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessDff0p337bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessAff0p337bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessCff0p337bp169
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 448000, 478000
+
+Loading: Chandler_Parkin_Fill_Factor_0p337_BP169Phase.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_b0b5c313
+  - loading layer: 1/0
+  - deleting layer: 200/0
+  - loading layer: 10/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorBff0p337bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorAff0p337bp169
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 448000, 956000
+
+Loading: Chandler_Parkin_Fill_Factor_0p337_BP170Lossiness1.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_a28da72d
+  - loading layer: 1/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 10/0
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessBff0p337bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessDff0p337bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessAff0p337bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessCff0p337bp170
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 448000, 1434000
+
+Loading: Chandler_Parkin_Fill_Factor_0p337_BP170Phase.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_c789da26
+  - loading layer: 1/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 10/0
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorBff0p337bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorAff0p337bp170
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 448000, 1912000
+
+Loading: Chandler_Parkin_Fill_Factor_0p337_BP171Phase.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_3bb8ceaa
+  - loading layer: 1/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorBff0p337bp171
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorAff0p337bp171
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 448000, 2390000
+
+Loading: Chandler_Parkin_Fill_Factor_0p345_BP169Lossiness1.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_0a693896
+  - loading layer: 1/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessBff0p345bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessDff0p345bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessAff0p345bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessCff0p345bp169
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 448000, 2868000
+
+Loading: Chandler_Parkin_Fill_Factor_0p345_BP169Phase.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_f7398d47
+  - loading layer: 1/0
+  - deleting layer: 200/0
+  - loading layer: 10/0
+  - deleting layer: 1/99
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorBff0p345bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorAff0p345bp169
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 448000, 3346000
+
+Loading: Chandler_Parkin_Fill_Factor_0p345_BP170Lossiness1.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_a362aba7
+  - loading layer: 1/0
+  - loading layer: 10/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 99/0
+  - deleting layer: 1/99
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessBff0p345bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessDff0p345bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessAff0p345bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessCff0p345bp170
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 448000, 3824000
+
+Loading: Chandler_Parkin_Fill_Factor_0p345_BP170Phase.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_4f3958f0
+  - loading layer: 1/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorBff0p345bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorAff0p345bp170
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 448000, 4302000
+
+Loading: Chandler_Parkin_Fill_Factor_0p345_BP171Phase.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_6357733c
+  - loading layer: 1/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 10/0
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorBff0p345bp171
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorAff0p345bp171
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 448000, 4780000
+
+Loading: Chandler_Parkin_Fill_Factor_0p355_BP169Lossiness1.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_45e145ae
+  - loading layer: 1/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 10/0
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessBff0p355bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessDff0p355bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessAff0p355bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessCff0p355bp169
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 448000, 5258000
+
+Loading: Chandler_Parkin_Fill_Factor_0p355_BP169Phase.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_5c327bc1
+  - loading layer: 1/0
+  - deleting layer: 200/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 10/0
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - deleting layer: 1/99
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorBff0p355bp169
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorAff0p355bp169
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 448000, 5736000
+
+Loading: Chandler_Parkin_Fill_Factor_0p355_BP170Lossiness1.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_ea8e0cbd
+  - loading layer: 1/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessBff0p355bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessDff0p355bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessAff0p355bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_LossinessCff0p355bp170
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 448000, 6214000
+
+Loading: Chandler_Parkin_Fill_Factor_0p355_BP170Phase.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_fd5f594c
+  - loading layer: 1/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 10/0
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - deleting layer: 1/99
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorBff0p355bp170
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorAff0p355bp170
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 448000, 6692000
+
+Loading: Chandler_Parkin_Fill_Factor_0p355_BP171Phase.gds, dated 20240714_2142
+  - course name: unknown
+  - top cell: pack_0_2e7e265f
+  - loading layer: 1/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 99/0
+  - loading layer: 998/0
+  - loading layer: 81/0
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorBff0p355bp171
+  - measurement label: opt_in_TE_1550_openEBL_ChandlerParkin_PhaseErrorAff0p355bp171
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 448000, 7170000
+
+Loading: EBeam_AndrazDebevc_CDCeskid.gds, dated 20240713_1333
+  - course name: edXphot1x
+  - top cell: TOP
+  - loading layer: 998/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 1/0
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_CGCeskidP150ff50
+  - measurement label: opt_in_TE_1550_device_CGCeskidP200ff65
+  - measurement label: opt_in_TE_1550_device_CGCeskidP200ff35
+  - measurement label: opt_in_TE_1550_device_CGCref
+  - measurement label: opt_in_TE_1550_device_GC1
+  - measurement label: opt_in_TE_1550_device_GC2
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 448000, 7648000
+
+Loading: EBeam_AndrazDebevc_CDCeskid_2.gds, dated 20240713_2222
+  - course name: edXphot1x
+  - top cell: TOP
+  - loading layer: 998/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_CGCeskidP150ff50
+  - measurement label: opt_in_TE_1550_device_CGCeskidP200ff65
+  - measurement label: opt_in_TE_1550_device_CGCeskidP200ff35
+  - measurement label: opt_in_TE_1550_device_CGCref
+  - measurement label: opt_in_TE_1550_device_GC1
+  - measurement label: opt_in_TE_1550_device_GC2
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 896000, 478000
+
+Loading: EBeam_AndrazDebevc_CDCeskid_3.gds, dated 20240713_2241
+  - course name: edXphot1x
+  - top cell: TOP
+  - loading layer: 998/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 1/0
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_CGCeskidP150ff50
+  - measurement label: opt_in_TE_1550_device_CGCeskidP200ff65
+  - measurement label: opt_in_TE_1550_device_CGCeskidP200ff35
+  - measurement label: opt_in_TE_1550_device_CGCref
+  - measurement label: opt_in_TE_1550_device_GC1
+  - measurement label: opt_in_TE_1550_device_CG2
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 896000, 956000
+
+Loading: EBeam_HFUT_Fjw_Heat_3.OAS, dated 20240715_2008
+  - course name: edXphot1x
+  - top cell: Rui_top
+  - loading layer: 1/0
+  - loading layer: 68/0
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - deleting layer: 1/99
+  - loading layer: 11/0
+  - loading layer: 99/0
+  - loading layer: 12/0
+  - loading layer: 13/0
+  - measurement label: opt_in_TE_1550_openEBL_fjw_spiral_P200_dw25_N5k
+  - measurement label: opt_in_TE_1550_openEBL_fjw_GC
+  - measurement label: opt_in_TE_1550_openEBL_fjw_spiral_P150_dw25_N5k
+  - measurement label: opt_in_TE_1550_openEBL_fjw_spiral_P200_dw25_N6k
+  - bounding box: (589220,664460;1029220,1134460)
+  - Placed at position: 896000, 1434000
+
+Loading: EBeam_aonurdasdemir_A.gds, dated 20240714_2344
+  - course name: edXphot1x
+  - top cell: EBeam_aonurdasdemir_A
+  - loading layer: 1/0
+  - loading layer: 10/0
+  - loading layer: 998/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_gcteA
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_gctmA
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_polindepte24A
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_polindeptm24A
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_polarbte24A
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 896000, 1912000
+
+Loading: EBeam_aonurdasdemir_B.gds, dated 20240714_2344
+  - course name: edXphot1x
+  - top cell: EBeam_aonurdasdemir_B
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_gctmB
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_polarbtm24B
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_gcteB
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_poldepte241B
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_poldeptm241B
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 896000, 2390000
+
+Loading: EBeam_aonurdasdemir_C.gds, dated 20240714_2344
+  - course name: edXphot1x
+  - top cell: EBeam_aonurdasdemir_C
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_gcteC
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_gctmC
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_polindepte242C
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_polindeptm242C
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_polarbte242C
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 896000, 2868000
+
+Loading: EBeam_aonurdasdemir_D.gds, dated 20240714_2344
+  - course name: edXphot1x
+  - top cell: EBeam_aonurdasdemir_D
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_gcteD
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_gctmD
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_polindepte243D
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_polindeptm243D
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_polarbte244D
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 896000, 3346000
+
+Loading: EBeam_aonurdasdemir_E.gds, dated 20240714_2344
+  - course name: edXphot1x
+  - top cell: EBeam_aonurdasdemir_E
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_gctmE
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_gcteE
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_polarbtm245E
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_polindeptm244E
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_polindepte244E
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 896000, 3824000
+
+Loading: EBeam_aonurdasdemir_F.gds, dated 20240714_2344
+  - course name: edXphot1x
+  - top cell: EBeam_aonurdasdemir_F
+  - loading layer: 1/0
+  - loading layer: 10/0
+  - loading layer: 998/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_gcteF
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_gctmF
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_poldepte245F
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_poldeptm245F
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_poldepte244F
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 896000, 4302000
+
+Loading: EBeam_aonurdasdemir_G.gds, dated 20240714_2344
+  - course name: edXphot1x
+  - top cell: EBeam_aonurdasdemir_G
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_polindeptm245G
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_gctmG
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_gcteG
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_poldeptm244G
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_polindepte245G
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 896000, 4780000
+
+Loading: EBeam_aonurdasdemir_H.gds, dated 20240714_2344
+  - course name: edXphot1x
+  - top cell: EBeam_aonurdasdemir_G
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_gctmG
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_gcteG
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_poldepte243G
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_polarbte245G
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_poldeptm243G
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 896000, 5258000
+
+Loading: EBeam_aonurdasdemir_I.gds, dated 20240714_2344
+  - course name: edXphot1x
+  - top cell: EBeam_aonurdasdemir_I
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_gctmI
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_gcteI
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_poldeptm242I
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_poldepte242I
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_polarbtm244I
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 896000, 5736000
+
+Loading: EBeam_aonurdasdemir_J.gds, dated 20240714_2344
+  - course name: edXphot1x
+  - top cell: EBeam_aonurdasdemir_J
+  - loading layer: 1/0
+  - loading layer: 10/0
+  - loading layer: 998/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_gctmJ
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_gcteJ
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_polindepte241J
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_polindeptm241J
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 896000, 6214000
+
+Loading: EBeam_aonurdasdemir_K.gds, dated 20240714_2344
+  - course name: edXphot1x
+  - top cell: EBeam_aonurdasdemir_K
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_gctmK
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_gcteK
+  - measurement label: opt_in_TM_1550_device_aonurdasdemir_poldeptm24K
+  - measurement label: opt_in_TE_1550_device_aonurdasdemir_poldepte24K
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 896000, 6692000
+
+Loading: EBeam_avit1622_A.gds, dated 20240714_1117
+  - course name: edXphot1x
+  - top cell: EBeam_avit1622_A_v1
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_avit1622_gcteA
+  - measurement label: opt_in_TM_1550_device_avit1622_gctmA
+  - measurement label: opt_in_TM_1550_device_avit1622_poldep2x5tmA
+  - measurement label: opt_in_TE_1550_device_avit1622_poldep2x5teA
+  - measurement label: opt_in_TE_1550_device_avit1622_poldep2x5x1teA
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 896000, 7170000
+
+Loading: EBeam_avit1622_B.gds, dated 20240714_1117
+  - course name: edXphot1x
+  - top cell: EBeam_avit1622_B_v1
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_avit1622_gcteB
+  - measurement label: opt_in_TM_1550_device_avit1622_gctmB
+  - measurement label: opt_in_TM_1550_device_avit1622_poldep2x5x1tmB
+  - measurement label: opt_in_TE_1550_device_avit1622_poldep2x5x2teB
+  - measurement label: opt_in_TM_1550_device_avit1622_poldep2x5x2tmB
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 896000, 7648000
+
+Loading: EBeam_avit1622_C.gds, dated 20240714_1117
+  - course name: edXphot1x
+  - top cell: EBeam_avit1622_C_v1
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_avit1622_gcteC
+  - measurement label: opt_in_TM_1550_device_avit1622_gctmC
+  - measurement label: opt_in_TM_1550_device_avit1622_poldep2x5x3tmC
+  - measurement label: opt_in_TE_1550_device_avit1622_poldep2x5x4teC
+  - measurement label: opt_in_TE_1550_device_avit1622_poldep2x5x3teC
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 896000, 8126000
+
+Loading: EBeam_avit1622_D.gds, dated 20240714_1117
+  - course name: edXphot1x
+  - top cell: EBeam_avit1622_D_v1
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - deleting layer: 999/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_avit1622_gcteD
+  - measurement label: opt_in_TM_1550_device_avit1622_gctmD
+  - measurement label: opt_in_TM_1550_device_avit1622_poldep2x5x4tmD
+  - measurement label: opt_in_TE_1550_device_avit1622_poldep2x5x5teD
+  - measurement label: opt_in_TM_1550_device_avit1622_poldep2x5x5tmD
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 1344000, 478000
+
+Loading: EBeam_avit1622_E.gds, dated 20240714_1117
+  - course name: edXphot1x
+  - top cell: EBeam_avit1622_E_v1
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - loading layer: 81/0
+  - deleting layer: 1/99
+  - deleting layer: 999/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_avit1622_gcteE
+  - measurement label: opt_in_TM_1550_device_avit1622_gctmE
+  - measurement label: opt_in_TM_1550_device_avit1622_polindep2x5tmE
+  - measurement label: opt_in_TE_1550_device_avit1622_polindep2x5teE
+  - measurement label: opt_in_TE_1550_device_avit1622_polindep2x5x1teE
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 1344000, 956000
+
+Loading: EBeam_avit1622_F.gds, dated 20240714_1117
+  - course name: edXphot1x
+  - top cell: EBeam_avit1622_F_v1
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - loading layer: 81/0
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_avit1622_gcteF
+  - measurement label: opt_in_TM_1550_device_avit1622_gctmF
+  - measurement label: opt_in_TM_1550_device_avit1622_polindep2x5x1tmF
+  - measurement label: opt_in_TE_1550_device_avit1622_polindep2x5x2teF
+  - measurement label: opt_in_TM_1550_device_avit1622_polindep2x5x2tmF
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 1344000, 1434000
+
+Loading: EBeam_avit1622_G.gds, dated 20240714_1117
+  - course name: edXphot1x
+  - top cell: EBeam_avit1622_G_v1
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - loading layer: 81/0
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_avit1622_gcteG
+  - measurement label: opt_in_TM_1550_device_avit1622_gctmG
+  - measurement label: opt_in_TM_1550_device_avit1622_polindep2x5x3tmG
+  - measurement label: opt_in_TE_1550_device_avit1622_polindep2x5x4teG
+  - measurement label: opt_in_TE_1550_device_avit1622_polindep2x5x3teG
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 1344000, 1912000
+
+Loading: EBeam_avit1622_H.gds, dated 20240714_1117
+  - course name: edXphot1x
+  - top cell: EBeam_avit1622_H_v1
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - loading layer: 81/0
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_avit1622_gcteH
+  - measurement label: opt_in_TM_1550_device_avit1622_gctmH
+  - measurement label: opt_in_TM_1550_device_avit1622_polindep2x5x4tmH
+  - measurement label: opt_in_TE_1550_device_avit1622_polindep2x5x5teH
+  - measurement label: opt_in_TM_1550_device_avit1622_polindep2x5x5tmH
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 1344000, 2390000
+
+Loading: EBeam_avit1622_I.gds, dated 20240714_1117
+  - course name: edXphot1x
+  - top cell: EBeam_avit1622_I_v1
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - loading layer: 81/0
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - measurement label: opt_in_TM_1550_device_avit1622_gctmI
+  - measurement label: opt_in_TM_1550_device_avit1622_polindep2x5x6tmI
+  - measurement label: opt_in_TE_1550_device_avit1622_polindep2x5x6teI
+  - measurement label: opt_in_TE_1550_device_avit1622_gcteI
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 1344000, 2868000
+
+Loading: EBeam_avit1622_J.gds, dated 20240714_1117
+  - course name: edXphot1x
+  - top cell: EBeam_avit1622_J_v1
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - loading layer: 81/0
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_avit1622_gcteJ
+  - measurement label: opt_in_TM_1550_device_avit1622_gctmJ
+  - measurement label: opt_in_TM_1550_device_avit1622_polarb2x5tmJ
+  - measurement label: opt_in_TE_1550_device_avit1622_polarb2x5teJ
+  - measurement label: opt_in_TE_1550_device_avit1622_polarb2x5x1teJ
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 1344000, 3346000
+
+Loading: EBeam_avit1622_K.gds, dated 20240714_1117
+  - course name: edXphot1x
+  - top cell: EBeam_avit1622_K_v1
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - loading layer: 81/0
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_avit1622_gcteK
+  - measurement label: opt_in_TM_1550_device_avit1622_gctmK
+  - measurement label: opt_in_TM_1550_device_avit1622_polarb2x5x1tmK
+  - measurement label: opt_in_TE_1550_device_avit1622_polarb2x5x2teK
+  - measurement label: opt_in_TM_1550_device_avit1622_polarb2x5x2tmK
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 1344000, 3824000
+
+Loading: EBeam_avit1622_L.gds, dated 20240714_1117
+  - course name: edXphot1x
+  - top cell: EBeam_avit1622_L_v1
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - loading layer: 81/0
+  - deleting layer: 1/99
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_avit1622_gcteL
+  - measurement label: opt_in_TM_1550_device_avit1622_gctmL
+  - measurement label: opt_in_TM_1550_device_avit1622_polarb2x5x3tmL
+  - measurement label: opt_in_TE_1550_device_avit1622_polarb2x5x4teL
+  - measurement label: opt_in_TE_1550_device_avit1622_polarb2x5x3teL
+  - bounding box: (-160240,-182160;279760,287840)
+  - Placed at position: 1344000, 4302000
+
+Loading: EBeam_avit1622_gctests.gds, dated 20240715_1547
+  - course name: edXphot1x
+  - top cell: EBeam_avit1622_gctests
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - deleting layer: 1/99
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_avit1622_gc-te-2port-in1
+  - measurement label: opt_in_TE_1550_device_avit1622_gc-te-2port-in2
+  - measurement label: opt_in_TM_1550_device_avit1622_gc-tm-2portin1
+  - measurement label: opt_in_TM_1550_device_avit1622_gc-tm-2port-in2
+  - measurement label: opt_in_TE_1550_device_avit1622_gc-te-3port-in1
+  - measurement label: opt_in_TM_1550_device_avit1622_gc-tm-3port-in1
+  - bounding box: (-220655,-234490;219345,235510)
+  - Placed at position: 1344000, 4780000
+
+Loading: EBeam_faresb_heater.gds, dated 20240713_0505
+  - course name: edXphot1x
+  - top cell: Ebeam_fares770
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 81/0
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - loading layer: 11/0
+  - loading layer: 13/0
+  - loading layer: 99/0
+  - bounding box: (-231850,-235810;208150,234190)
+  - Placed at position: 1344000, 5258000
+
+Loading: EBeam_heater_commlab_student_PC1.gds, dated 20240714_1215
+  - course name: edXphot1x
+  - top cell: TOP
+  - loading layer: 998/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 1/0
+  - loading layer: 10/0
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - loading layer: 11/0
+  - loading layer: 13/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_CommlabStudent_PC1
+  - bounding box: (-220000,-235000;220000,235000)
+  - Placed at position: 1344000, 5736000
+
+Loading: EBeam_heater_commlab_student_PSR1.gds, dated 20240714_2013
+  - course name: edXphot1x
+  - top cell: EBeam_commlab_student_PSR1
+  - loading layer: 998/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TM_1550_device_PSR1b
+  - measurement label: opt_in_TE_1550_device_PSR1a
+  - bounding box: (-220000,-235000;220000,235000)
+  - Placed at position: 1344000, 6214000
+
+Loading: EBeam_heater_commlab_student_PSR2.gds, dated 20240714_2013
+  - course name: edXphot1x
+  - top cell: EBeam_commlab_student_PSR2
+  - loading layer: 998/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_PSR2a
+  - measurement label: opt_in_TM_1550_device_PSR2b
+  - bounding box: (-220000,-235000;220000,235000)
+  - Placed at position: 1344000, 6692000
+
+Loading: EBeam_heater_commlab_student_RRArray1.gds, dated 20240714_1443
+  - course name: edXphot1x
+  - top cell: TOP
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - loading layer: 998/0
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - loading layer: 11/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 13/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_CommLabStudent_RRArray1
+  - bounding box: (-220000,-235000;220000,235000)
+  - Placed at position: 1344000, 7170000
+
+Loading: EBeam_heater_commlab_student_RRArray2.gds, dated 20240714_1443
+  - course name: edXphot1x
+  - top cell: TOP
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - deleting layer: 1/99
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - loading layer: 11/0
+  - loading layer: 13/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TM_1550_device_CommLabStudent_RRArray2
+  - bounding box: (-220000,-235000;220000,235000)
+  - Placed at position: 1344000, 7648000
+
+Loading: EBeam_heater_commlab_student_RRArray3.gds, dated 20240714_1443
+  - course name: edXphot1x
+  - top cell: TOP
+  - loading layer: 998/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - loading layer: 13/0
+  - loading layer: 11/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_CommLabStudent_RRArray3
+  - bounding box: (-220000,-235000;220000,235000)
+  - Placed at position: 1344000, 8126000
+
+Loading: EBeam_heater_commlab_student_RRArray4.gds, dated 20240714_1443
+  - course name: edXphot1x
+  - top cell: TOP
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - deleting layer: 1/99
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - loading layer: 11/0
+  - loading layer: 10/0
+  - loading layer: 13/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TM_1550_device_CommLabStudent_RRArray2
+  - bounding box: (-220000,-235000;220000,235000)
+  - Placed at position: 1792000, 478000
+
+Loading: EBeam_heater_commlab_student_WDMFilter1.gds, dated 20240714_1215
+  - course name: edXphot1x
+  - top cell: Test
+  - loading layer: 998/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - loading layer: 11/0
+  - loading layer: 10/0
+  - loading layer: 13/0
+  - deleting layer: 1/99
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_CommlabStudent_WDMFilter1
+  - bounding box: (-244750,-231450;195250,238550)
+  - Placed at position: 1792000, 956000
+
+Loading: EBeam_heater_commlab_student_WDMFilter2.gds, dated 20240714_1215
+  - course name: edXphot1x
+  - top cell: EBeam_heater_WDMFilter2
+  - loading layer: 998/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - loading layer: 11/0
+  - loading layer: 13/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_commlab_student_WDMFilter2
+  - bounding box: (-220000,-235000;220000,235000)
+  - Placed at position: 1792000, 1434000
+
+Loading: EBeam_heaters_4rnaudPetit.gds, dated 20240713_1138
+  - course name: edXphot1x
+  - top cell: ANT-V7
+  - loading layer: 998/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - loading layer: 13/0
+  - loading layer: 11/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TM_1550_device_DiskResonator15um
+  - measurement label: opt_in_TM_1550_device_DiskResonator10um
+  - measurement label: opt_in_TM_1550_device_MRMheater15um
+  - measurement label: opt_in_TM_1550_device_MZMheater20um
+  - bounding box: (-220000,-235000;220000,235000)
+  - Placed at position: 1792000, 1912000
+
+Loading: EBeam_heaters_BraggGratingwithHeater.gds, dated 20240612_1459
+  - course name: edXphot1x
+  - top cell: EBeam_BraggGratingwithHeater
+  - loading layer: 12/0
+  - loading layer: 13/0
+  - loading layer: 998/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 1/0
+  - deleting layer: 1/99
+  - loading layer: 1/11
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 11/0
+  - loading layer: 99/0
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 1792000, 2390000
+
+Loading: EBeam_heaters_BraggGratingwithHeater.oas, dated 20240502_2056
+  - course name: edXphot1x
+  - top cell: EBeam_BraggGratingwithHeater
+  - loading layer: 998/0
+  - loading layer: 12/0
+  - loading layer: 13/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 1/0
+  - deleting layer: 1/99
+  - loading layer: 1/11
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 11/0
+  - loading layer: 99/0
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 1792000, 2868000
+
+Loading: EBeam_heaters_Ghazaleh-nour_tests.gds, dated 20240714_1608
+  - course name: edXphot1x
+  - top cell: TOP
+  - loading layer: 10/0
+  - loading layer: 1/0
+  - loading layer: 998/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 81/0
+  - loading layer: 1/11
+  - loading layer: 12/0
+  - loading layer: 13/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_GhazalehRing1
+  - bounding box: (-104205,-204260;335795,265740)
+  - Placed at position: 1792000, 3346000
+
+Loading: EBeam_heaters_commlab_studentWDMfilter2stage.gds, dated 20240712_1702
+  - course name: edXphot1x
+  - top cell: Test
+  - loading layer: 998/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - loading layer: 11/0
+  - loading layer: 10/0
+  - loading layer: 13/0
+  - deleting layer: 1/99
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_CommlabStudentPC
+  - bounding box: (-244750,-231450;195250,238550)
+  - Placed at position: 1792000, 3824000
+
+Loading: EBeam_heaters_dmildenb.gds, dated 20240715_0013
+  - course name: edXphot1x
+  - top cell: EBeam_dmildenb_v1
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - loading layer: 11/0
+  - loading layer: 81/0
+  - loading layer: 13/0
+  - loading layer: 99/0
+  - bounding box: (-220000,-235000;220000,235000)
+  - Placed at position: 1792000, 4302000
+
+Loading: EBeam_heaters_mariusminnen_A.gds, dated 20240715_2053
+  - course name: edXphot1x
+  - top cell: EBeam_heaters_mariusminnen_A_v5
+  - loading layer: 998/0
+  - loading layer: 12/0
+  - loading layer: 13/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - loading layer: 1/0
+  - deleting layer: 1/99
+  - loading layer: 1/11
+  - loading layer: 11/0
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - bounding box: (-221640,-232830;218360,237170)
+  - Placed at position: 1792000, 4780000
+
+Loading: EBeam_heaters_mariusminnen_B.gds, dated 20240715_2119
+  - course name: edXphot1x
+  - top cell: EBeam_heaters_mariusminnen_B_v3
+  - loading layer: 998/0
+  - loading layer: 12/0
+  - loading layer: 13/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - loading layer: 1/0
+  - deleting layer: 1/99
+  - loading layer: 1/11
+  - loading layer: 11/0
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - bounding box: (-221640,-233960;218360,236040)
+  - Placed at position: 1792000, 5258000
+
+Loading: EBeam_heaters_mariusminnen_C.gds, dated 20240715_2136
+  - course name: edXphot1x
+  - top cell: EBeam_heaters_mariusminnen_C_v3
+  - loading layer: 998/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - loading layer: 1/0
+  - loading layer: 12/0
+  - loading layer: 13/0
+  - deleting layer: 1/99
+  - loading layer: 1/11
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 11/0
+  - loading layer: 99/0
+  - bounding box: (-221640,-232830;218360,237170)
+  - Placed at position: 1792000, 5736000
+
+Loading: EBeam_heaters_mariusminnen_D.gds, dated 20240715_2140
+  - course name: edXphot1x
+  - top cell: EBeam_heaters_mariusminnen_D_v3
+  - loading layer: 998/0
+  - loading layer: 12/0
+  - loading layer: 13/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - loading layer: 1/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 1/11
+  - loading layer: 11/0
+  - loading layer: 99/0
+  - bounding box: (-221640,-232830;218360,237170)
+  - Placed at position: 1792000, 6214000
+
+Loading: EBeam_heaters_mustafah.oas, dated 20240714_2111
+  - course name: edXphot1x
+  - top cell: EBeam_heaters_mustafah
+  - loading layer: 10/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 1/0
+  - loading layer: 11/0
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - loading layer: 998/0
+  - loading layer: 13/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - bounding box: (0,0;440000,470470)
+  - WARNING: Cell was clipped to maximum size of 440000 X 470000
+  - clipped bounding box: (0,0;440000,470000)
+  - Placed at position: 1792000, 6692000
+
+Loading: EBeam_heaters_mustafah_otf.oas, dated 20240714_2309
+  - course name: edXphot1x
+  - top cell: EBeam_heaters_mustafah_otf
+  - loading layer: 998/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - loading layer: 10/0
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - deleting layer: 1/99
+  - loading layer: 11/0
+  - loading layer: 13/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_mustafah_otf
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 1792000, 7170000
+
+Loading: EBeam_heaters_snewman_RMA1.gds, dated 20240715_1116
+  - course name: edXphot1x
+  - top cell: EBeam_heaters_snewman_RMA1_v12
+  - loading layer: 998/0
+  - loading layer: 12/0
+  - loading layer: 13/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 1/0
+  - loading layer: 11/0
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 1/11
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_snewmanRMA1
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 1792000, 7648000
+
+Loading: EBeam_heaters_snewman_RMA2.gds, dated 20240715_1721
+  - course name: edXphot1x
+  - top cell: EBeam_heaters_snewman_RMA2_v04
+  - loading layer: 998/0
+  - loading layer: 12/0
+  - loading layer: 13/0
+  - loading layer: 1/0
+  - loading layer: 11/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 1/11
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_snewmanRMA2
+  - measurement label: opt_in_TE_1550_device_snewmanGCDembed
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 1792000, 8126000
+
+Loading: EBeam_heaters_snewman_RMA3.gds, dated 20240715_2112
+  - course name: edXphot1x
+  - top cell: EBeam_heaters_snewman_RMA3_v03
+  - loading layer: 998/0
+  - loading layer: 1/0
+  - loading layer: 12/0
+  - loading layer: 13/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - deleting layer: 1/99
+  - loading layer: 11/0
+  - loading layer: 1/11
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_snewmanRMA3
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 2240000, 478000
+
+Loading: EBeam_heaters_snewman_SQWG.gds, dated 20240714_1406
+  - course name: edXphot1x
+  - top cell: EBeam_heaters_snewman_SQWG_v01
+  - loading layer: 998/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_snewmanSQWG_TE_L1_172p4_um
+  - measurement label: opt_in_TE_1550_device_snewmanSQWG_TE_L2_344p1_um
+  - measurement label: opt_in_TE_1550_device_snewmanSQWG_TE_L3_546p4_um
+  - measurement label: opt_in_TE_1550_device_snewmanSQWG_TE_L4_779p4_um
+  - measurement label: opt_in_TE_1550_device_snewmanSQWG_TE_L5_1043p0_um
+  - measurement label: opt_in_TE_1550_device_snewmanSQWG_TE_L6_1337p3_um
+  - measurement label: opt_in_TE_1550_device_snewmanSQWG_TE_L7_1662p3_um
+  - measurement label: opt_in_TM_1550_device_snewmanSQWG_TM_L7_1662p3_um
+  - measurement label: opt_in_TM_1550_device_snewmanSQWG_TM_L6_1337p3_um
+  - measurement label: opt_in_TM_1550_device_snewmanSQWG_TM_L5_1043p0_um
+  - measurement label: opt_in_TM_1550_device_snewmanSQWG_TM_L4_779p4_um
+  - measurement label: opt_in_TM_1550_device_snewmanSQWG_TM_L3_546p4_um
+  - measurement label: opt_in_TM_1550_device_snewmanSQWG_TM_L2_344p1_um
+  - measurement label: opt_in_TM_1550_device_snewmanSQWG_TM_L1_172p4_um
+  - bounding box: (-870,0;439130,470000)
+  - Placed at position: 2240000, 956000
+
+Loading: Ebeam_BentonQiu_PassiveRings.gds, dated 20240714_2013
+  - course name: edXphot1x
+  - top cell: Metal
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_Ring5
+  - measurement label: opt_in_TE_1550_device_Ring6
+  - measurement label: opt_in_TE_1550_device_Ring7
+  - measurement label: opt_in_TE_1550_device_Ring8
+  - measurement label: opt_in_TE_1550_device_Ring
+  - measurement label: opt_in_TE_1550_device_Ring3
+  - measurement label: opt_in_TE_1550_device_Ring4
+  - measurement label: opt_in_TE_1550_device_Ring1
+  - bounding box: (-229410,-229355;210590,240645)
+  - Placed at position: 2240000, 1434000
+
+Loading: Ebeam_Heaters_ColemanTheSoulman.gds, dated 20240714_1417
+  - course name: edXphot1x
+  - top cell: EBeam_Heaters_ColemanTheSoulman_V1
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - loading layer: 13/0
+  - loading layer: 81/0
+  - loading layer: 11/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_ColemanTheSoulmanTMMZI1
+  - bounding box: (-221369,-234500;219500,235500)
+  - WARNING: Cell was clipped to maximum size of 440000 X 470000
+  - clipped bounding box: (-221369,-234500;218631,235500)
+  - Placed at position: 2240000, 1912000
+
+Loading: Ebeam_heaters_prakashdas_02_Decoder.gds, dated 20240714_1324
+  - course name: edXphot1x
+  - top cell: Ebeam_heaters_prakashdas_02_Decoder
+  - loading layer: 10/0
+  - loading layer: 998/0
+  - loading layer: 12/0
+  - loading layer: 13/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 1/0
+  - deleting layer: 1/99
+  - deleting layer: 733/0
+  - loading layer: 1/11
+  - loading layer: 11/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_Device_prakashdas_02_Decoder
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 2240000, 2390000
+
+Loading: Example.oas, dated 20240520_0229
+  - course name: unknown
+  - layout should only contain one top cell; contains (95): ['EBeam_heaters_2023_05', 'ebeam_splitter_swg_assist_te1550', 'GC_TE_1550_8degOxide_BB', 'GC_TM_1550_8degOxide_BB', 'GC_TE_1310_8degOxide_BB', 'GC_TE_1550_8degOxide_BB$1', 'GC_TM_1310_8degOxide_BB', 'GC_TE_1550_8degOxide_BB$2', 'ebeam_gc_te1550', 'ebeam_gc_te1550$1', 'ebeam_gc_te1550$2', 'ebeam_gc_te1550$3', 'ebeam_gc_te1550$4', 'ebeam_gc_te1550$5', 'GC_TE_1550_8degOxide_BB$3', 'GC_TE_1550_8degOxide_BB$4', 'GC_TE_1550_8degOxide_BB$5', 'GC_TE_1550_8degOxide_BB$6', 'GC_TE_1550_8degOxide_BB$7', 'GC_TE_1550_8degOxide_BB$8', 'GC_TE_1550_8degOxide_BB$9', 'GC_TE_1550_8degOxide_BB$10', 'GC_TE_1550_8degOxide_BB$11', 'GC_TE_1550_8degOxide_BB$12', 'GC_TE_1550_8degOxide_BB$13', 'GC_TE_1550_8degOxide_BB$14', 'GC_TE_1550_8degOxide_BB$15', 'ebeam_gc_te1550$6', 'ebeam_splitter_swg_assist_te1550$1', 'GC_TE_1550_8degOxide_BB$16', 'ebeam_splitter_swg_assist_te1550$2', 'GC_TE_1550_8degOxide_BB$17', 'ebeam_gc_te1550$7', 'GC_TE_1550_8degOxide_BB$18', 'GC_TE_1550_8degOxide_BB$19', 'GC_TE_1550_8degOxide_BB$20', 'GC_TE_1550_8degOxide_BB$21', 'GC_TE_1310_8degOxide_BB$1', 'ebeam_gc_te1550$8', 'ebeam_gc_te1550$9', 'GC_TE_1550_8degOxide_BB$22', 'ebeam_splitter_swg_assist_te1550$3', 'ebeam_gc_te1550$10', 'ebeam_splitter_swg_assist_te1550$4', 'ebeam_splitter_swg_assist_te1550$5', 'GC_TE_1550_8degOxide_BB$23', 'GC_TE_1550_8degOxide_BB$24', 'ebeam_gc_te1550$11', 'ebeam_gc_te1550$12', 'ebeam_gc_te1550$13', 'ebeam_gc_te1550$14', 'ebeam_gc_te1550$15', 'ebeam_splitter_swg_assist_te1550$6', 'ebeam_gc_te1550$16', 'ebeam_gc_te1550$17', 'ebeam_gc_te1550$18', 'ebeam_gc_te1550$19', 'ebeam_gc_te1550$20', 'ebeam_gc_te1550$21', 'ebeam_gc_te1550$22', 'ebeam_gc_te1550$23', 'ebeam_gc_te1550$24', 'ebeam_gc_te1550$25', 'ebeam_gc_te1550$26', 'ebeam_gc_te1550$27', 'GC_TE_1550_8degOxide_BB$25', 'GC_TE_1550_8degOxide_BB$26', 'GC_TE_1550_8degOxide_BB$27', 'GC_TE_1550_8degOxide_BB$28', 'GC_TE_1550_8degOxide_BB$29', 'GC_TE_1550_8degOxide_BB$30', 'GC_TE_1550_8degOxide_BB$31', 'GC_TE_1550_8degOxide_BB$32', 'ebeam_gc_te1550$28', 'GC_TE_1550_8degOxide_BB$33', 'GC_TE_1550_8degOxide_BB$34', 'GC_TE_1550_8degOxide_BB$35', 'GC_TE_1550_8degOxide_BB$36', 'GC_TE_1550_8degOxide_BB$37', 'GC_TE_1550_8degOxide_BB$38', 'GC_TE_1550_8degOxide_BB$39', 'GC_TE_1550_8degOxide_BB$40', 'GC_TE_1550_8degOxide_BB$1$1', 'GC_TE_1550_8degOxide_BB$41', 'GC_TE_1550_8degOxide_BB$42', 'GC_TE_1550_8degOxide_BB$17$1', 'ebeam_splitter_swg_assist_te1550$7', 'ebeam_gc_te1550$29', 'ebeam_splitter_swg_assist_te1550$8', 'GC_TE_1550_8degOxide_BB$43', 'ebeam_gc_te1550$30', 'ebeam_gc_te1550$31', 'ebeam_gc_te1550$32', 'ebeam_gc_te1550$33', 'ebeam_splitter_swg_assist_te1310_ANT']
+
+Loading: SIEPIC_LucasRantz_DoubleMZI.gds, dated 20240714_1834
+  - course name: SiEPIC
+  - top cell: TOP
+  - loading layer: 998/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - loading layer: 11/0
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 13/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_DoubleMZI
+  - bounding box: (-3000,0;437000,470000)
+  - Placed at position: 2240000, 2868000
+
+Loading: SiEPIC_AntoninRiera.oas, dated 20240715_1343
+  - course name: SiEPIC
+  - top cell: SiEPIC_AntoninRiera
+  - loading layer: 998/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 1/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_RingDoubleTEr15g100
+  - measurement label: opt_in_TE_1550_device_RingDoubleTEr10g100
+  - measurement label: opt_in_TE_1550_device_RingDoubleTEr10g90
+  - measurement label: opt_in_TE_1550_device_RingDoubleTEr5g90
+  - measurement label: opt_in_TE_1550_device_RingDoubleTEr10g80
+  - measurement label: opt_in_TE_1550_device_RingDoubleTEr5g80
+  - measurement label: opt_in_TE_1550_device_RingDoubleTEr5g70
+  - measurement label: opt_in_TE_1550_device_RingDoubleTEr10g70
+  - measurement label: opt_in_TE_1550_device_RingDoubleTEr3g70
+  - bounding box: (0,0;605000,410000)
+  - WARNING: Cell was clipped to maximum size of 440000 X 470000
+  - clipped bounding box: (0,0;440000,410000)
+  - Placed at position: 2240000, 3346000
+
+Loading: SiEPIC_FengGuo_MZIheaters.gds, dated 20240713_1630
+  - course name: SiEPIC
+  - top cell: TOP
+  - loading layer: 998/0
+  - loading layer: 68/0
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - loading layer: 13/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 11/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_MZIwithheater70
+  - measurement label: opt_in_TE_1550_device_MZIwithheater100
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 2240000, 3824000
+
+Loading: SiEPIC_StefMar_design1.gds, dated 20240712_2207
+  - course name: SiEPIC
+  - top cell: TOP
+  - loading layer: 998/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 12/0
+  - loading layer: 13/0
+  - loading layer: 1/11
+  - loading layer: 11/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_Ring2
+  - measurement label: opt_in_TE_1550_device_Ring1
+  - bounding box: (1000,-3000;441000,467000)
+  - Placed at position: 2240000, 4302000
+
+Loading: SiEPIC_StefMar_design2.gds, dated 20240712_2157
+  - course name: SiEPIC
+  - top cell: TOP
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 998/0
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 12/0
+  - loading layer: 13/0
+  - loading layer: 1/11
+  - loading layer: 11/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_Ring2
+  - measurement label: opt_in_TE_1550_device_Ring1
+  - bounding box: (1000,-3000;441000,467000)
+  - Placed at position: 2240000, 4780000
+
+Loading: SiEPIC_Zhongan.gds, dated 20240712_1157
+  - course name: SiEPIC
+  - top cell: TOP
+  - loading layer: 998/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 1/0
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_ RingResonator6
+  - measurement label: opt_in_TE_1550_device_ RingResonator5
+  - measurement label: opt_in_TE_1550_device_ RingResonator3
+  - measurement label: opt_in_TE_1550_device_ RingResonator4
+  - measurement label: opt_in_TE_1550_device_ RingResonator2
+  - measurement label: opt_in_TE_1550_device_ RingResonator1
+  - bounding box: (400,-10000;440400,460000)
+  - Placed at position: 2240000, 5258000
+
+Loading: SiEPIC_alistairhp_1310MZIsw.gds, dated 20240712_1314
+  - course name: SiEPIC
+  - top cell: ahp1310MZIsw
+  - loading layer: 998/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - loading layer: 13/0
+  - loading layer: 11/0
+  - deleting layer: 999/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1310_device_ahp1310MZIsw
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 2240000, 5736000
+
+Loading: SiEPIC_alistairhp_1550MZIsw.gds, dated 20240712_1314
+  - course name: SiEPIC
+  - top cell: ahp1550MZIsw
+  - loading layer: 998/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - loading layer: 11/0
+  - loading layer: 81/0
+  - loading layer: 13/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_ahp1550MZIsw
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 2240000, 6214000
+
+Loading: SiEPIC_alistairhp_2stagefilter.gds, dated 20240712_1314
+  - course name: SiEPIC
+  - top cell: ahp2stage
+  - loading layer: 998/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1310_device_ahp2stagefilter
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 2240000, 6692000
+
+Loading: SiEPIC_alistairhp_double2stage.gds, dated 20240712_1314
+  - course name: SiEPIC
+  - top cell: ahpdouble2stage
+  - loading layer: 998/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1310_device_ahpdouble2stage
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 2240000, 7170000
+
+Loading: SiEPIC_alistairhp_doublefilter.gds, dated 20240712_1314
+  - course name: SiEPIC
+  - top cell: ahpdoublefilter
+  - loading layer: 998/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1310_device_ahpdoublefilter
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 2240000, 7648000
+
+Loading: SiEPIC_nisreenalnaji1.gds, dated 20240709_1153
+  - course name: SiEPIC
+  - top cell: TOP
+  - loading layer: 10/0
+  - loading layer: 998/0
+  - deleting layer: 733/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 81/0
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - loading layer: 13/0
+  - loading layer: 11/0
+  - loading layer: 99/0
+  - bounding box: (-248170,-84195;191830,385805)
+  - Placed at position: 2240000, 8126000
+
+Loading: SiEPIC_nisreenalnaji2.gds, dated 20240709_1154
+  - course name: SiEPIC
+  - top cell: TOP
+  - loading layer: 10/0
+  - loading layer: 998/0
+  - deleting layer: 733/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 81/0
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - loading layer: 13/0
+  - loading layer: 11/0
+  - loading layer: 99/0
+  - bounding box: (-250340,-84195;189660,385805)
+  - Placed at position: 2688000, 478000
+
+Loading: SiEPIC_nisreenalnaji3.gds, dated 20240709_1154
+  - course name: SiEPIC
+  - top cell: TOP
+  - loading layer: 998/0
+  - loading layer: 1/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 12/0
+  - loading layer: 1/11
+  - loading layer: 11/0
+  - loading layer: 13/0
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - bounding box: (-245320,-84195;194680,385805)
+  - Placed at position: 2688000, 956000
+
+Loading: openEBL_SK747_SWGTaper_350_EBLOpt.GDS, dated 20240715_2252
+  - course name: unknown
+  - top cell: openEBL_SK747_SWGTaper_350_EbeamOpt
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 1/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1310_SWGTaper_350500_Ebeam_32
+  - measurement label: opt_in_TE_1310_SWGTaper_350500_Ebeam_16
+  - measurement label: opt_in_TE_1310_SWGTaper_350500_Ebeam_56
+  - bounding box: (-220000,-235000;220000,235000)
+  - Placed at position: 2688000, 1434000
+
+Loading: openEBL_SK747_SWGTaper_350_EBLOpt2.GDS, dated 20240715_2252
+  - course name: unknown
+  - top cell: openEBL_SK747_SWGTaper_350_EbeamOpt
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 1/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1310_SWGTaper_350500_Ebeam_48
+  - bounding box: (-220000,-235000;220000,235000)
+  - Placed at position: 2688000, 1912000
+
+Loading: openEBL_SK747_SWGTaper_350_GlobalOpt.GDS, dated 20240715_2252
+  - course name: unknown
+  - top cell: openEBL_SK747_SWGTaper_350_Global
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 1/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1310_SWGTaper_350500_GLOBAL2
+  - measurement label: opt_in_TE_1310_SWGTaper_350500_GLOBAL3
+  - measurement label: opt_in_TE_1310_SWGTaper_350500_GLOBAL
+  - bounding box: (-220000,-235000;220000,235000)
+  - Placed at position: 2688000, 2390000
+
+Loading: test.gds, dated 20240714_0002
+  - course name: unknown
+  - top cell: EBeam_BraggGratingwithHeater
+  - loading layer: 998/0
+  - loading layer: 12/0
+  - loading layer: 13/0
+  - loading layer: 68/0
+  - loading layer: 1/10
+  - loading layer: 1/0
+  - deleting layer: 1/99
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 1/11
+  - loading layer: 11/0
+  - loading layer: 99/0
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 2688000, 2868000
+
+Loading: waveguide_crossing.gds, dated 20240715_1003
+  - course name: unknown
+  - top cell: TOP
+  - loading layer: 998/0
+  - loading layer: 1/10
+  - loading layer: 68/0
+  - deleting layer: 1/99
+  - loading layer: 1/0
+  - loading layer: 10/0
+  - loading layer: 81/0
+  - loading layer: 99/0
+  - measurement label: opt_in_TE_1550_device_WGCrossing
+  - bounding box: (0,0;440000,470000)
+  - Placed at position: 2688000, 3346000
+
+Loading: EBL_Framework_1cm_PCM_static.oas, dated 20240713_2200
+  - course name: unknown
+
+
+Execution time: 5 seconds
