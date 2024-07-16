@@ -37,15 +37,27 @@ try:
    if len(layout.top_cells()) != 1:
       print('Error: the layout needs to have only 1 top cell. It has %s.\n' % len(layout.top_cells()))
       num_errors += 1
-
    top_cell = layout.top_cell()
 except:
-   print('Unknown error occurred.\n')
-   num_errors = 1
+   print('Unknown error occurred (top cell check).\n')
+   num_errors += 1
+
+try:
+   # Make sure layout extent fits within the allocated area.
+   cell_Width = 470000
+   cell_Height = 440000
+   bbox = top_cell.bbox()
+   if bbox.width() > cell_Width or bbox.height() > cell_Height:
+      print('Error: Cell bounding box / extent (%s, %s) is larger than the maximum size of %s X %s microns' % (bbox.width()/1000, bbox.height()/1000, cell_Width/1000, cell_Height/1000) )
+      num_errors += 1
+except:
+   print('Unknown error occurred (floor plan check).\n')
+   num_errors += 1
+
 
 '''
 # run verification
-# Presently not possible via Python pya module
+# Not possible via Python pya module
 # https://www.klayout.de/forum/discussion/2108/build-qt-ui-in-python-module-to-run-drc
 drc_interpreter = pya.Interpreter.ruby_interpreter()
 drc_interpreter.define_variable("input", layout)
@@ -92,7 +104,12 @@ def check_space_width (cell, rule_table_space_width, tolerance=1):
         errors += ' - No Space/Width errors detected.\n'
     return num_errors, errors
 
-num_errors, errors = check_space_width (layout.top_cell(), rule_table_space_width)
+try:
+    num_errors1, errors = check_space_width (layout.top_cell(), rule_table_space_width)
+    num_errors += num_errors1
+except:
+   print('Unknown error occurred (DRC check_space_width).\n')
+   num_errors += 1
 
 print(errors)
 
