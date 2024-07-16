@@ -91,8 +91,7 @@ The verification and merging is performed using GitHub actions. The repository i
 3) Performing Functional verification on the designs in the "submissions" folder, and outputing the errors as an Artifact
 4) Merging the designs from the "submissions" folder, and outputing merged layout as an Artifact
 
-## Latest Merge Layout File
+## Merged Layout File
 
-<!-- start-link -->
-https://github.com/SiEPIC/openEBL-2024-07-Si-Heaters/actions/runs/9951539304/artifacts/1704892636
-<!-- end-link -->
+[Layout file: EBeam_2024_07_15.oas](merge/EBeam_2024_07_15.oas)
+
