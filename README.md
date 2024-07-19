@@ -40,9 +40,8 @@ The submission involves several steps. First, you need to create your design(s) 
  - Design tools and process design kit (SiEPIC-EBeam-PDK, KLayout implementation)<a href="https://github.com/siepic/SiEPIC_EBeam_PDK/wiki/Installation-instructions">installation instructions</a>. 
  - Automated measurement test routine is submitted as a YAML file that is created using the following utility:
  
-pip install dreamcreator
-from dreamcreator import sequencecreator as sc
-sc.launch()
+pip install SiEPIC_TestCreator
+SiEPIC_TestCreator --gui
 
 ## Submission via GitHub
  
