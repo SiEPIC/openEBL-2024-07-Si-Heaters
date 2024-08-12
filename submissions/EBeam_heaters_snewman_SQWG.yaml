@@ -8,7 +8,7 @@ Devices:
     - 304.0
     polarization: TE
     sequences:
-    - devicesTE_1550nm_WLSweep(wavelength_sweep_ida)
+    - wavelengthSweep_TE_1550nm_devices(wavelength_sweep_ida)
     wavelength: '1550'
   snewmanSQWG_TE_L2_344p1_um:
     device_id: snewmanSQWG_TE_L2_344p1_um
@@ -19,7 +19,7 @@ Devices:
     - 304.0
     polarization: TE
     sequences:
-    - devicesTE_1550nm_WLSweep(wavelength_sweep_ida)
+    - wavelengthSweep_TE_1550nm_devices(wavelength_sweep_ida)
     wavelength: '1550'
   snewmanSQWG_TE_L3_546p4_um:
     device_id: snewmanSQWG_TE_L3_546p4_um
@@ -30,7 +30,7 @@ Devices:
     - 304.0
     polarization: TE
     sequences:
-    - devicesTE_1550nm_WLSweep(wavelength_sweep_ida)
+    - wavelengthSweep_TE_1550nm_devices(wavelength_sweep_ida)
     wavelength: '1550'
   snewmanSQWG_TE_L4_779p4_um:
     device_id: snewmanSQWG_TE_L4_779p4_um
@@ -41,7 +41,7 @@ Devices:
     - 304.0
     polarization: TE
     sequences:
-    - devicesTE_1550nm_WLSweep(wavelength_sweep_ida)
+    - wavelengthSweep_TE_1550nm_devices(wavelength_sweep_ida)
     wavelength: '1550'
   snewmanSQWG_TE_L5_1043p0_um:
     device_id: snewmanSQWG_TE_L5_1043p0_um
@@ -52,7 +52,7 @@ Devices:
     - 304.0
     polarization: TE
     sequences:
-    - devicesTE_1550nm_WLSweep(wavelength_sweep_ida)
+    - wavelengthSweep_TE_1550nm_devices(wavelength_sweep_ida)
     wavelength: '1550'
   snewmanSQWG_TE_L6_1337p3_um:
     device_id: snewmanSQWG_TE_L6_1337p3_um
@@ -63,7 +63,7 @@ Devices:
     - 304.0
     polarization: TE
     sequences:
-    - devicesTE_1550nm_WLSweep(wavelength_sweep_ida)
+    - wavelengthSweep_TE_1550nm_devices(wavelength_sweep_ida)
     wavelength: '1550'
   snewmanSQWG_TE_L7_1662p3_um:
     device_id: snewmanSQWG_TE_L7_1662p3_um
@@ -74,7 +74,7 @@ Devices:
     - 304.0
     polarization: TE
     sequences:
-    - devicesTE_1550nm_WLSweep(wavelength_sweep_ida)
+    - wavelengthSweep_TE_1550nm_devices(wavelength_sweep_ida)
     wavelength: '1550'
   snewmanSQWG_TM_L1_172p4_um:
     device_id: snewmanSQWG_TM_L1_172p4_um
@@ -85,7 +85,7 @@ Devices:
     - 50.0
     polarization: TM
     sequences:
-    - devicesTM_1550nm_WLSweep(wavelength_sweep_ida)
+    - wavelengthSweep_TM_1550nm_devices(wavelength_sweep_ida)
     wavelength: '1550'
   snewmanSQWG_TM_L2_344p1_um:
     device_id: snewmanSQWG_TM_L2_344p1_um
@@ -96,7 +96,7 @@ Devices:
     - 50.0
     polarization: TM
     sequences:
-    - devicesTM_1550nm_WLSweep(wavelength_sweep_ida)
+    - wavelengthSweep_TM_1550nm_devices(wavelength_sweep_ida)
     wavelength: '1550'
   snewmanSQWG_TM_L3_546p4_um:
     device_id: snewmanSQWG_TM_L3_546p4_um
@@ -107,7 +107,7 @@ Devices:
     - 50.0
     polarization: TM
     sequences:
-    - devicesTM_1550nm_WLSweep(wavelength_sweep_ida)
+    - wavelengthSweep_TM_1550nm_devices(wavelength_sweep_ida)
     wavelength: '1550'
   snewmanSQWG_TM_L4_779p4_um:
     device_id: snewmanSQWG_TM_L4_779p4_um
@@ -118,7 +118,7 @@ Devices:
     - 50.0
     polarization: TM
     sequences:
-    - devicesTM_1550nm_WLSweep(wavelength_sweep_ida)
+    - wavelengthSweep_TM_1550nm_devices(wavelength_sweep_ida)
     wavelength: '1550'
   snewmanSQWG_TM_L5_1043p0_um:
     device_id: snewmanSQWG_TM_L5_1043p0_um
@@ -129,7 +129,7 @@ Devices:
     - 50.0
     polarization: TM
     sequences:
-    - devicesTM_1550nm_WLSweep(wavelength_sweep_ida)
+    - wavelengthSweep_TM_1550nm_devices(wavelength_sweep_ida)
     wavelength: '1550'
   snewmanSQWG_TM_L6_1337p3_um:
     device_id: snewmanSQWG_TM_L6_1337p3_um
@@ -140,7 +140,7 @@ Devices:
     - 50.0
     polarization: TM
     sequences:
-    - devicesTM_1550nm_WLSweep(wavelength_sweep_ida)
+    - wavelengthSweep_TM_1550nm_devices(wavelength_sweep_ida)
     wavelength: '1550'
   snewmanSQWG_TM_L7_1662p3_um:
     device_id: snewmanSQWG_TM_L7_1662p3_um
@@ -151,10 +151,10 @@ Devices:
     - 50.0
     polarization: TM
     sequences:
-    - devicesTM_1550nm_WLSweep(wavelength_sweep_ida)
+    - wavelengthSweep_TM_1550nm_devices(wavelength_sweep_ida)
     wavelength: '1550'
 Sequences:
-  devicesTE_1550nm_WLSweep(wavelength_sweep_ida):
+  wavelengthSweep_TE_1550nm_devices(wavelength_sweep_ida):
     Runtime: 25.0
     results_info:
       csv: 'True'
@@ -175,14 +175,14 @@ Sequences:
     variables:
       Initialrange: '-20'
       Laser Output: High Power
-      Numscans: '1'
+      Numscans: '3'
       Power: '1'
       RangeDec: '20'
       Start: '1480'
-      Step: '1'
+      Step: '0.1'
       Stop: '1580'
       Sweep Speed: auto
-  devicesTM_1550nm_WLSweep(wavelength_sweep_ida):
+  wavelengthSweep_TM_1550nm_devices(wavelength_sweep_ida):
     Runtime: 25.0
     results_info:
       csv: 'True'
@@ -203,10 +203,10 @@ Sequences:
     variables:
       Initialrange: '-20'
       Laser Output: High Power
-      Numscans: '1'
+      Numscans: '3'
       Power: '1'
       RangeDec: '20'
       Start: '1480'
-      Step: '1'
+      Step: '0.1'
       Stop: '1580'
       Sweep Speed: auto
